@@ -1,14 +1,26 @@
 package com.example.docseeker
 
+import Beans.News
+import Interface.NewsService
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import androidx.recyclerview.widget.LinearLayoutManager
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class DashboardPatients : AppCompatActivity() {
 
@@ -26,15 +38,12 @@ class DashboardPatients : AppCompatActivity() {
                 RecyclerView.OVER_SCROLL_NEVER // Remove the scroll effect
         }
 
-        val demoData = arrayListOf(
-            "Mala Nutrición",
-            "Sexta oleada Covid",
-            "Nueva cura para el SIDA descubierta",
-            "Cáncer cada vez más común en recién nacidos",
-            "Mal clima y como afecta la salud"
-        )
-
-        viewPager.adapter = CarouselRVAdapter(demoData)
+        //SETTING JUST THE LAST 5 NEWS TO THE CAROUSEL ADAPTER
+        GlobalScope.launch(Dispatchers.Main) {
+            val arrayOfNews = getNews()
+            val lastFiveNews = arrayOfNews.takeLast(5).toTypedArray()
+            viewPager.adapter = CarouselRVAdapter(lastFiveNews)
+        }
 
         val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
@@ -54,5 +63,46 @@ class DashboardPatients : AppCompatActivity() {
         // SET OnClickListener WITH ToolbarClickListener
         button1.setOnClickListener(toolbarClickListener)
         button2.setOnClickListener(toolbarClickListener)
+    }
+
+    suspend fun getNews(): Array<News>{
+
+        //GETTING NEWS DATA FROM ENDPOINT
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val newsService = retrofit.create(NewsService::class.java)
+
+
+        return withContext(Dispatchers.IO) {
+            val response = newsService.getNews().execute()
+            if (response.isSuccessful) {
+                response.body()?.toTypedArray() ?: emptyArray()
+            } else {
+                emptyArray()
+            }
+        }
+
+
+        //RETURNING ARRAY TYPE Array<News>?
+
+        /*var arrayOfNews: Array<News>? = null
+
+        newsService.getNews().enqueue(object : Callback<List<News>> {
+            override fun onResponse(call: Call<List<News>>, response: Response<List<News>>) {
+                if (response.isSuccessful) {
+                    val newsList = response.body()
+                    arrayOfNews = newsList?.toTypedArray()
+
+                } else {
+                }
+            }
+
+            override fun onFailure(call: Call<List<News>>, t: Throwable) {
+            }
+        })*/
+        //return arrayOfNews
     }
 }
