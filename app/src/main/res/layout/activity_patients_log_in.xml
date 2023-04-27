@@ -32,6 +32,7 @@
         android:layout_marginVertical="20dp">
 
         <EditText
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/input_shape"
@@ -42,6 +43,7 @@
             android:layout_margin="15dp"/>
 
         <EditText
+            android:id="@+id/passwordInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/input_shape"
@@ -49,10 +51,23 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:hint="Contraseña"
+            android:inputType="textPassword"
             android:layout_margin="15dp"/>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:id="@+id/txtComment"
+        />
+
     <Button
+        android:id="@+id/logInButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
