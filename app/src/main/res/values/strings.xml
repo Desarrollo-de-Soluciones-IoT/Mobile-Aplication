@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DocSeeker</string>
+    <string name="app_home">Inicio</string>
+    <string name="app_news">Noticias</string>
+    <string name="app_profile">Perfil</string>
+    <string name="app_settings">Ajustes</string>
+
 </resources>
