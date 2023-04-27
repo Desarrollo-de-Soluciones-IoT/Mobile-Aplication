@@ -11,10 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,6 +27,8 @@ class Patients_LogIn : AppCompatActivity() {
         val txtPassword: EditText =findViewById(R.id.passwordInput)
         val txtComment: TextView =findViewById(R.id.txtComment)
         val btnLogIn: Button =findViewById(R.id.logInButton)
+        var userLogged: Patients? = null
+
 
         //GETTING PATIENTS DATA FROM ENDPOINT
         GlobalScope.launch(Dispatchers.Main) {
@@ -38,15 +37,10 @@ class Patients_LogIn : AppCompatActivity() {
             btnLogIn.setOnClickListener(){
                 val user:String=txtEmail.text.toString()
                 val password:String=txtPassword.text.toString()
-
-                var userLogged: Patients? = null
-
                 for (patient in arrayOfPatients) {
                     if (patient.email == user && patient.password == password) {
                         userLogged = patient
-                        txtComment.text="FELICIDADES INICIASTE SESIÓN"
-                        val intent= Intent(this,
-                        DashboardPatients::class.java)
+                        val intent= Intent(this@Patients_LogIn, DashboardPatients::class.java)
                         startActivity(intent)
                         break
                     }
