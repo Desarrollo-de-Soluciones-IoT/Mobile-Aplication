@@ -3,6 +3,7 @@ package com.example.docseeker
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -39,5 +40,19 @@ class DashboardPatients : AppCompatActivity() {
         compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
         viewPager.setPageTransformer(compositePageTransformer)
 
+
+        // FUNCTIONS TO EVERY ACTIVITY WHICH USES TOOLBAR
+        val toolbarClickListener = ToolbarClickListener(this)
+
+        // REFERENCES TO BUTTONS FROM TOOLBAR
+        val button1 = findViewById<ImageButton>(R.id.button1)
+        val button2 = findViewById<ImageButton>(R.id.button2)
+        val button3 = findViewById<ImageButton>(R.id.button3)
+        val button4 = findViewById<ImageButton>(R.id.button4)
+
+
+        // SET OnClickListener WITH ToolbarClickListener
+        button1.setOnClickListener(toolbarClickListener)
+        button2.setOnClickListener(toolbarClickListener)
     }
 }
