@@ -6,17 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:elevation="8dp"
-    android:background="@color/secondary">
+    android:background="@color/secondary"
+    android:layout_gravity="center">
 
     <TextView
         android:id="@+id/textview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="20dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet lectus a mi lobortis iaculis. Mauris odio tortor, accumsan vel gravida sit amet, malesuada a tortor. Cras mattis augue eget dolor vestibulum, id euismod diam rutrum."
+        android:text="Texto de prueba para que sea solo 1 linea"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="20sp"/>
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:src="@drawable/descarga"></ImageView>
 
 </LinearLayout>

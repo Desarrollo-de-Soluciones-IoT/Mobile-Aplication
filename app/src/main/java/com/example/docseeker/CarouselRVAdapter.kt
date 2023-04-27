@@ -1,10 +1,14 @@
 package com.example.docseeker
 
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+
 
 class CarouselRVAdapter(private val carouselDataList: ArrayList<String>) :
     RecyclerView.Adapter<CarouselRVAdapter.CarouselItemViewHolder>() {
@@ -17,6 +21,8 @@ class CarouselRVAdapter(private val carouselDataList: ArrayList<String>) :
     }
 
     override fun onBindViewHolder(holder: CarouselItemViewHolder, position: Int) {
+
+        val itemView = holder.itemView
         val textView = holder.itemView.findViewById<TextView>(R.id.textview)
         textView.text = carouselDataList[position]
     }
