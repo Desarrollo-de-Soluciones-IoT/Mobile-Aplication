@@ -4,5 +4,5 @@
     <string name="app_news">Noticias</string>
     <string name="app_profile">Perfil</string>
     <string name="app_settings">Ajustes</string>
-
+    <string name="welcome_message">Bienvenido a DocSeeker</string>
 </resources>
