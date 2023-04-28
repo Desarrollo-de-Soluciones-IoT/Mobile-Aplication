@@ -18,5 +18,39 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/welcome_screen_background"/>
+        android:src="@drawable/welcome_screen_background"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_message"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sign Up"
+            android:textSize="20sp"
+            android:background="@drawable/button_primary"/>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Log In"
+            android:textSize="20sp"
+            android:background="@drawable/button_secondary"/>
+    </LinearLayout>
+
 </RelativeLayout>
