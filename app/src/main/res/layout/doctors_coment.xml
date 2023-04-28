@@ -18,7 +18,7 @@
 
 
             <LinearLayout
-                android:layout_width="107dp"
+                android:layout_width="115dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
@@ -28,12 +28,13 @@
                     android:layout_gravity="right"
                     android:background="@drawable/border_image"
                     android:clipToOutline="true"
+                    android:foregroundGravity="center"
                     android:scaleType="fitXY"
                     android:src="@drawable/docotor_coment" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="308dp"
+                android:layout_width="298dp"
                 android:layout_height="140dp"
                 android:layout_gravity="right"
                 android:orientation="vertical"
@@ -70,46 +71,77 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="529dp"
-            android:orientation="vertical"
+            android:layout_height="106dp"
+            android:orientation="horizontal"
             android:padding="8dp">
 
+
             <ImageView
-                android:layout_width="247dp"
-                android:layout_height="233dp"
-                android:layout_gravity="center"
-                android:background="@drawable/border_alert"
+
+                android:layout_width="114dp"
+                android:layout_height="89dp"
+                android:layout_gravity="left"
+                android:background="@drawable/border_image"
                 android:clipToOutline="true"
+                android:foregroundGravity="center"
                 android:scaleType="fitXY"
-                android:src="@drawable/alert" />
+                android:src="@drawable/paciente" />
 
             <TextView
-                android:layout_width="324dp"
-                android:layout_height="168dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="No hay ninguna reseña aún"
-                android:textAlignment="center"
-                android:textSize="45dp"
+                android:padding="8dp"
+                android:text="Sebastian del Campo Yapes"
+                android:textSize="18sp"
                 android:textStyle="bold" />
-
-            <Button
-
-                android:layout_width="230dp"
-                android:layout_height="71dp"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/primary"
-                android:text="Comentar"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-
-
-                />
 
 
         </LinearLayout>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="299dp"
+            android:layout_height="256dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp">
+
+
+            <EditText
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="La atención recibida por el profesional de salud fue adecuada, siempre vino puntual a la cita y me ayudó a mejorar mis problemas,la recomiendo 100%" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1 " />
+
+        <Button
+
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center"
+            android:backgroundTint="@color/primary"
+            android:padding="8dp"
+            android:text="Comentar"
+
+            android:textColor="@color/black"
+            android:textSize="20sp"
+
+            />
+
     </LinearLayout>
+
+
+
 
     <include
 
