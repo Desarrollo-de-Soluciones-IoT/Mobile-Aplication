@@ -5,4 +5,6 @@
     <string name="app_profile">Perfil</string>
     <string name="app_settings">Ajustes</string>
     <string name="welcome_message">Bienvenido a DocSeeker</string>
+    <string name="healthcare_professional">Profesional de la salud</string>
+    <string name="patient">Paciente</string>
 </resources>
