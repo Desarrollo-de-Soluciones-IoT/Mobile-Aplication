@@ -173,7 +173,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/border_color"
-                android:src="@drawable/profile_medicine" />
+                android:src="@drawable/profile_information" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -211,7 +211,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/border_color"
-                android:src="@drawable/profile_medicine" />
+                android:src="@drawable/profile_configuration" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -249,7 +249,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/border_color"
-                android:src="@drawable/profile_medicine" />
+                android:src="@drawable/profile_password" />
 
             <TextView
                 android:layout_width="wrap_content"
