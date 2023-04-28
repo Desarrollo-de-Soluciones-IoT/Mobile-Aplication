@@ -52,7 +52,8 @@
             android:layout_gravity="center"
             android:background="@drawable/button_primary"
             android:text="Sign Up"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
 
         <Button
             android:layout_width="300dp"
@@ -62,7 +63,8 @@
             android:background="@drawable/button_secondary"
             android:text="Log In"
             android:textSize="20sp"
-            android:onClick="goToUserSelection"/>
+            android:onClick="goToUserSelection"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </RelativeLayout>
