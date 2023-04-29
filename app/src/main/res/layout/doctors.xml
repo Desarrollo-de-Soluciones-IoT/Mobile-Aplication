@@ -12,62 +12,11 @@
         android:layout_height="673dp"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
+        <include
+            layout="@layout/top_doctor"
             android:layout_width="match_parent"
-            android:layout_height="140dp">
-
-
-            <LinearLayout
-                android:layout_width="107dp"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="right"
-                    android:background="@drawable/border_image"
-                    android:clipToOutline="true"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/docotor_coment" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="308dp"
-                android:layout_height="140dp"
-                android:layout_gravity="right"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-
-                <TextView
-                    android:layout_width="123dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="Carla Vicuña"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="123dp"
-                    android:layout_height="wrap_content"
-                    android:text="Dermatologa"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="14sp" />
-
-                <RatingBar
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|start"
-                    android:numStars="5"
-                    android:rating="4"
-                    android:stepSize="1" />
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
+            android:layout_height="134dp" />
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="529dp"
@@ -78,20 +27,20 @@
                 android:layout_width="247dp"
                 android:layout_height="233dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/border_alert"
                 android:clipToOutline="true"
                 android:scaleType="fitXY"
                 android:src="@drawable/alert" />
 
             <TextView
-                android:layout_width="324dp"
-                android:layout_height="168dp"
+                android:layout_width="293dp"
+                android:layout_height="101dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="40dp"
                 android:text="No hay ninguna reseña aún"
                 android:textAlignment="center"
-                android:textSize="45dp"
-                android:textStyle="bold" />
+                android:textSize="35dp" />
 
             <Button
 
@@ -100,7 +49,8 @@
                 android:layout_gravity="center"
                 android:backgroundTint="@color/primary"
                 android:text="Comentar"
-                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
                 android:textSize="20sp"
 
 
