@@ -2,6 +2,7 @@ package com.example.docseeker
 
 import Beans.Patients
 import Interface.PatientsService
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
@@ -19,15 +20,20 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class Patients_LogIn : AppCompatActivity() {
+    lateinit var userLogged: Patients
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_patients_log_in)
+
+        // SharedPreferences USER LOGGED
+        val sharedPref = getSharedPreferences("userLogged", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
 
         val txtEmail: EditText =findViewById(R.id.emailInput)
         val txtPassword: EditText =findViewById(R.id.passwordInput)
         val txtComment: TextView =findViewById(R.id.txtComment)
         val btnLogIn: Button =findViewById(R.id.logInButton)
-        var userLogged: Patients? = null
 
 
         //GETTING PATIENTS DATA FROM ENDPOINT
@@ -40,6 +46,18 @@ class Patients_LogIn : AppCompatActivity() {
                 for (patient in arrayOfPatients) {
                     if (patient.email == user && patient.password == password) {
                         userLogged = patient
+                        // SAVE SharedPreferences
+                        editor.putString("age", userLogged.age.toString())
+                        editor.putString("DNI", userLogged.DNI)
+                        editor.putString("email", userLogged.email)
+                        editor.putString("name", userLogged.name)
+                        editor.putString("password", userLogged.password)
+                        editor.putString("height", userLogged.height.toString())
+                        editor.putString("weight", userLogged.weight.toString())
+                        editor.putString("birth_date", userLogged.birth_date)
+                        editor.putString("phone_number", userLogged.phone_number.toString())
+                        editor.apply()
+
                         val intent= Intent(this@Patients_LogIn, DashboardPatients::class.java)
                         startActivity(intent)
                         break
@@ -86,5 +104,12 @@ class Patients_LogIn : AppCompatActivity() {
             }
         })
         return arrayOfPatients*/
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        val sharedPref = getSharedPreferences("userLogged", Context.MODE_PRIVATE)
+        sharedPref.edit().clear().apply()
     }
 }

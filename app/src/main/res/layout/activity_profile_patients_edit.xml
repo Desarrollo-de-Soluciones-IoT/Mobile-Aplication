@@ -8,12 +8,14 @@
     <include
         layout="@layout/profile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/infoProfile"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="514dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <EditText
             android:layout_width="370dp"
@@ -21,15 +23,8 @@
             android:layout_margin="20dp"
             android:background="@drawable/border_comment"
             android:text="Altura"
-            android:textAlignment="center" />
-
-        <EditText
-            android:layout_width="370dp"
-            android:layout_height="50dp"
-            android:layout_margin="20dp"
-            android:background="@drawable/border_comment"
-            android:text="Masa Corporal"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:id="@+id/heightInput"/>
 
         <EditText
             android:layout_width="370dp"
@@ -37,14 +32,40 @@
             android:layout_margin="20dp"
             android:background="@drawable/border_comment"
             android:text="Peso"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:id="@+id/weightInput"/>
+
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/border_comment"
+            android:text="Fecha de Nacimiento"
+            android:textAlignment="center"
+            android:id="@+id/birthdayInput"/>
+
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/border_comment"
+            android:text="Número de celular"
+            android:textAlignment="center"
+            android:id="@+id/numberphoneInput"/>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/saveButton"
             android:layout_width="370dp"
             android:layout_height="60dp"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/primary"
-            android:text="EDITAR"/>
+            android:background="@drawable/button_primary"
+            android:textColor="@color/white"
+            android:onClick="goToProfile"
+            android:text="Guardar"/>
+
     </LinearLayout>
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -29,7 +29,8 @@
                 android:background="@drawable/border"
                 android:clipToOutline="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/paciente_profile" />
+                android:src="@drawable/paciente_profile"
+                android:id="@+id/profilePicture"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,10 +48,11 @@
                         android:layout_height="wrap_content"
                         android:text="Camilo Alberto Cortés Montejo"
                         android:textSize="19dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:id="@+id/profileName"/>
 
                     <ImageButton
-                        android:id="@+id/button1"
+                        android:id="@+id/editButton"
                         android:layout_width="34dp"
                         android:layout_height="34dp"
                         android:layout_marginLeft="30dp"
@@ -79,7 +81,9 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:textSize="15dp"
-                        android:text="01/01/1980" />
+                        android:text="01/01/1980"
+                        android:gravity="center"
+                        android:id="@+id/profileBirth"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -101,7 +105,9 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:textSize="15dp"
-                        android:text="989  710  635"/>
+                        android:text="989  710  635"
+                        android:gravity="center"
+                        android:id="@+id/profileNumber"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
