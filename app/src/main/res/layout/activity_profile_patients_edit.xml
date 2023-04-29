@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="514dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/border_comment"
+            android:text="Altura"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/border_comment"
+            android:text="Masa Corporal"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/border_comment"
+            android:text="Peso"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/primary"
+            android:text="EDITAR"/>
+    </LinearLayout>
+</LinearLayout>
