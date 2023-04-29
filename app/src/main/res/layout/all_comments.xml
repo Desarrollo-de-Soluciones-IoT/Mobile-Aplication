@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="673dp"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/top_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="134dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="439dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+
+                android:layout_width="68dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/border_image"
+                android:clipToOutline="true"
+                android:foregroundGravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/paciente_profile" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:padding="8dp"
+                    android:text="Camilo Alberto Cortés Montejo"
+                    android:textSize="14sp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:padding="8dp"
+                    android:text="Muy buena atención brindada por la profesional"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/primary"
+            android:text="Comentar"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <include
+
+
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+</LinearLayout>
+
