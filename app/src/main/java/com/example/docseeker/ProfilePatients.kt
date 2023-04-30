@@ -19,7 +19,6 @@ class ProfilePatients: AppCompatActivity() {
         setContentView(R.layout.activity_profile_patients)
 
         val sharedPref = getSharedPreferences("userLogged", Context.MODE_PRIVATE)
-
         infoProfileComponent = findViewById(R.id.infoProfile)
 
         val photo = infoProfileComponent.findViewById<ImageView>(R.id.profilePicture)

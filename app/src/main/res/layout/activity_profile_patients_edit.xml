@@ -22,7 +22,7 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:background="@drawable/border_comment"
-            android:text="Altura"
+            android:hint="Altura"
             android:textAlignment="center"
             android:id="@+id/heightInput"/>
 
@@ -31,7 +31,7 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:background="@drawable/border_comment"
-            android:text="Peso"
+            android:hint="Peso"
             android:textAlignment="center"
             android:id="@+id/weightInput"/>
 
@@ -40,7 +40,7 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:background="@drawable/border_comment"
-            android:text="Fecha de Nacimiento"
+            android:hint="Fecha de Nacimiento"
             android:textAlignment="center"
             android:id="@+id/birthdayInput"/>
 
@@ -49,7 +49,7 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:background="@drawable/border_comment"
-            android:text="Número de celular"
+            android:hint="Número de celular"
             android:textAlignment="center"
             android:id="@+id/numberphoneInput"/>
 

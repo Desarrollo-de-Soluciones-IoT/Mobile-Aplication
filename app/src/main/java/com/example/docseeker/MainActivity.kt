@@ -1,5 +1,6 @@
 package com.example.docseeker
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,5 +15,11 @@ class MainActivity : AppCompatActivity() {
     fun goToUserSelection(view: View) {
         val intent = Intent(this, UserSelection::class.java)
         startActivity(intent)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        val sharedPref = getSharedPreferences("userLogged", Context.MODE_PRIVATE)
+        sharedPref.edit().clear().apply()
     }
 }

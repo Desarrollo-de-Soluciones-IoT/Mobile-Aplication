@@ -70,7 +70,7 @@ class DashboardPatients : AppCompatActivity() {
 
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            .baseUrl("http://192.168.1.180:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

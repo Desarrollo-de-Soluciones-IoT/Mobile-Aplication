@@ -21,19 +21,18 @@ class EditProfile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_patients_edit)
 
-        infoProfileComponent = findViewById(R.id.infoProfile)
         val sharedPref = getSharedPreferences("userLogged", Context.MODE_PRIVATE)
-
+        infoProfileComponent = findViewById(R.id.infoProfile)
 
         val photo = infoProfileComponent.findViewById<ImageView>(R.id.profilePicture)
         val name = infoProfileComponent.findViewById<TextView>(R.id.profileName)
         val birth = infoProfileComponent.findViewById<TextView>(R.id.profileBirth)
         val number = infoProfileComponent.findViewById<TextView>(R.id.profileNumber)
 
-        heightInput = infoProfileComponent.findViewById(R.id.heightInput)
-        weightInput = infoProfileComponent.findViewById(R.id.weightInput)
-        birthdayInput = infoProfileComponent.findViewById(R.id.birthdayInput)
-        numberphoneInput = infoProfileComponent.findViewById(R.id.numberphoneInput)
+        heightInput = findViewById(R.id.heightInput)
+        weightInput = findViewById(R.id.weightInput)
+        birthdayInput = findViewById(R.id.birthdayInput)
+        numberphoneInput = findViewById(R.id.numberphoneInput)
 
 
         photo.setImageResource(R.drawable.paciente_profile)
@@ -45,12 +44,22 @@ class EditProfile : AppCompatActivity() {
         val sharedPref = getSharedPreferences("userLogged", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
 
-        editor.putString("height", heightInput.toString())
-        editor.putString("weight", weightInput.toString())
-        editor.putString("birth_date", birthdayInput.toString())
-        editor.putString("phone_number", numberphoneInput.toString())
+        if(!heightInput.text.isBlank()){
+            editor.putString("height", heightInput.text.toString())
+        }
+        if(!weightInput.text.isBlank()) {
+            editor.putString("weight", weightInput.text.toString())
+        }
+        if(!birthdayInput.text.isBlank()) {
+            editor.putString("birth_date", birthdayInput.text.toString())
+        }
+        if(!numberphoneInput.text.isBlank()){
+            editor.putString("phone_number", numberphoneInput.text.toString())
+        }
+        editor.apply()
 
         val intent = Intent(this, ProfilePatients::class.java)
         startActivity(intent)
     }
+
 }
