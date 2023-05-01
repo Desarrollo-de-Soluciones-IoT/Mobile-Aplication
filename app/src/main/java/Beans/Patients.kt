@@ -3,6 +3,7 @@ package Beans
 import java.util.Date
 
 class Patients {
+    var id: Int
     var age: Int
     var dni: String
     var email: String
@@ -15,6 +16,7 @@ class Patients {
     var userType:String
 
     constructor(
+        id: Int,
         age: Int,
         dni: String,
         email: String,
@@ -26,6 +28,7 @@ class Patients {
         phoneNumber: String,
         userType: String
     ) {
+        this.id = id
         this.age = age
         this.dni = dni
         this.email = email

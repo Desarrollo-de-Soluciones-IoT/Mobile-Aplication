@@ -93,6 +93,7 @@ class Patients_LogIn : AppCompatActivity() {
                     if (patient.email == user && patient.password == password) {
                         userLogged = patient
                         // SAVE SharedPreferences
+                        editor.putString("id", userLogged.id.toString())
                         editor.putString("age", userLogged.age.toString())
                         editor.putString("DNI", userLogged.dni)
                         editor.putString("email", userLogged.email)
