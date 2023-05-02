@@ -241,19 +241,19 @@
                              - Diabetes tipo 2
                              - Presión artereal alta
                              - Hipertiroidismo controlado
-                             - Tuberculosis"/>
+                             - Tuberculosis" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <Button
         android:layout_width="180dp"
+        android:id="@+id/PDF_history"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="110dp"
         android:text="GENERAR PDF"
         android:backgroundTint="#FD5D5D"/>
-
 
 
 </LinearLayout>
