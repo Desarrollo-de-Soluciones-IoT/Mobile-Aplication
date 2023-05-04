@@ -79,7 +79,7 @@
             android:stepSize="1 " />
 
         <Button
-            android:layout_margin="2dp"
+
             android:layout_width="208dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
