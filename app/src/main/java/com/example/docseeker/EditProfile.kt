@@ -39,7 +39,24 @@ class EditProfile : AppCompatActivity() {
         name.text = sharedPref.getString("name", "Paciente Usuario")
         birth.text = sharedPref.getString("birth_date", "XX/XX/XXXX")
         number.text = sharedPref.getString("phone_number", "999999999")
+
+
+        // FUNCTIONS TO EVERY ACTIVITY WHICH USES TOOLBAR
+        val toolbarClickListener = ToolbarClickListener(this)
+
+        // REFERENCES TO BUTTONS FROM TOOLBAR
+        val button1 = findViewById<ImageButton>(R.id.button1)
+        val button2 = findViewById<ImageButton>(R.id.button2)
+        val button3 = findViewById<ImageButton>(R.id.button3)
+        val button4 = findViewById<ImageButton>(R.id.button4)
+
+
+        // SET OnClickListener WITH ToolbarClickListener
+        button1.setOnClickListener(toolbarClickListener)
+        button2.setOnClickListener(toolbarClickListener)
+        button3.setOnClickListener(toolbarClickListener)
     }
+
     fun goToProfile(view: View) {
         val sharedPref = getSharedPreferences("userLogged", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
