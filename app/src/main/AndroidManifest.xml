@@ -15,6 +15,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".PrescriptionPatient"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ListPrescriptions"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
             android:name=".MedicalHistoryPatient"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

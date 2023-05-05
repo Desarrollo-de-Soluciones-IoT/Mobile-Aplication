@@ -18,7 +18,8 @@
             android:layout_height="1dp"
             android:background="#000"/>
 
-        <TableRow>
+        <TableRow
+            android:id="@+id/itemTable">
 
             <TextView
                 android:padding="5dp"
