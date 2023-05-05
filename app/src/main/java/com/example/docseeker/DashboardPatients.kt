@@ -51,6 +51,16 @@ class DashboardPatients : AppCompatActivity() {
         compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
         viewPager.setPageTransformer(compositePageTransformer)
 
+        val doctorbutton = findViewById<CardView>(R.id.menu_doctor)
+        doctorbutton.setOnClickListener{
+            val intent = Intent(this, ListDoctors   ::class.java)
+            startActivity(intent)
+        }
+        val medicalbutton = findViewById<CardView>(R.id.menu_medical_history)
+        medicalbutton.setOnClickListener{
+            val intent = Intent(this, MedicalHistoryPatient::class.java)
+            startActivity(intent)
+        }
 
         // FUNCTIONS TO EVERY ACTIVITY WHICH USES TOOLBAR
         val toolbarClickListener = ToolbarClickListener(this)
@@ -61,11 +71,6 @@ class DashboardPatients : AppCompatActivity() {
         val button3 = findViewById<ImageButton>(R.id.button3)
         val button4 = findViewById<ImageButton>(R.id.button4)
 
-        val doctorbutton = findViewById<CardView>(R.id.menu_doctor)
-        doctorbutton.setOnClickListener{
-            val intent = Intent(this, ListDoctors::class.java)
-            startActivity(intent)
-        }
 
         // SET OnClickListener WITH ToolbarClickListener
         button1.setOnClickListener(toolbarClickListener)
@@ -77,7 +82,7 @@ class DashboardPatients : AppCompatActivity() {
 
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://190.237.32.175:8080/api/v1/")
+            .baseUrl("http://192.168.1.180:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

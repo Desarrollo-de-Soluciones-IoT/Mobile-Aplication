@@ -21,7 +21,7 @@
         android:layout_width="380dp"
         android:layout_marginTop="30dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="18dp"
+        android:layout_gravity="center"
         app:cardCornerRadius="12dp"
         android:orientation="vertical">
 
@@ -112,7 +112,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="380dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="18dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         app:cardCornerRadius="12dp"
         android:orientation="vertical">
@@ -212,7 +212,7 @@
         android:layout_marginTop="20dp"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="18dp"
+        android:layout_gravity="center"
         app:cardCornerRadius="12dp"
         android:orientation="vertical">
 
@@ -251,9 +251,13 @@
         android:id="@+id/PDF_history"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="110dp"
+        android:layout_gravity="center"
         android:text="GENERAR PDF"
-        android:backgroundTint="#FD5D5D"/>
-
+        android:textColor="@color/white"
+        android:background="@drawable/button_primary"/>
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
