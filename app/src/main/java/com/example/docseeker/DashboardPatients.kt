@@ -2,10 +2,12 @@ package com.example.docseeker
 
 import Beans.News
 import Interface.NewsService
+import android.content.Intent
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import androidx.recyclerview.widget.RecyclerView
@@ -59,6 +61,11 @@ class DashboardPatients : AppCompatActivity() {
         val button3 = findViewById<ImageButton>(R.id.button3)
         val button4 = findViewById<ImageButton>(R.id.button4)
 
+        val doctorbutton = findViewById<CardView>(R.id.menu_doctor)
+        doctorbutton.setOnClickListener{
+            val intent = Intent(this, ListDoctors::class.java)
+            startActivity(intent)
+        }
 
         // SET OnClickListener WITH ToolbarClickListener
         button1.setOnClickListener(toolbarClickListener)
