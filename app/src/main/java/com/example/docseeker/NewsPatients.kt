@@ -24,7 +24,6 @@ class NewsPatients : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_patients)
 
-        // Configurar RecyclerView
         val recyclerView: RecyclerView = findViewById(R.id.recyclerNews)
         recyclerView.layoutManager = LinearLayoutManager(this)
         newsAdapter = NewsAdapter(emptyArray())

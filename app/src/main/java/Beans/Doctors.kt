@@ -9,10 +9,10 @@ class Doctors {
     var password: String
     var userType: String
     var description: String
-    var doctor_fee: Int
-    var experience_years: Int
-    var patients_assisted: Int
-    var profile_photo: String
+    var doctorFee: Float
+    var experienceYears: Int
+    var patientsAssisted: Int
+    var profilePhoto: String
     var speciality: String
 
     constructor(
@@ -24,10 +24,10 @@ class Doctors {
         password: String,
         userType: String,
         description: String,
-        doctor_fee: Int,
-        experience_years: Int,
-        patients_assisted: Int,
-        profile_photo: String,
+        doctorFee: Float,
+        experienceYears: Int,
+        patientsAssisted: Int,
+        profilePhoto: String,
         speciality: String
     ) {
         this.id = id
@@ -38,10 +38,10 @@ class Doctors {
         this.password = password
         this.userType = userType
         this.description = description
-        this.doctor_fee = doctor_fee
-        this.experience_years = experience_years
-        this.patients_assisted = patients_assisted
-        this.profile_photo = profile_photo
+        this.doctorFee = doctorFee
+        this.experienceYears = experienceYears
+        this.patientsAssisted = patientsAssisted
+        this.profilePhoto = profilePhoto
         this.speciality = speciality
     }
 }

@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     tools:context=".ListDoctors">
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -18,7 +19,6 @@
             android:layout_weight="1"
             />
     </LinearLayout>
-
     <include
         layout="@layout/toolbar"
         android:layout_width="match_parent"
