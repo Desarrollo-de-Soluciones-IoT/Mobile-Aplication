@@ -43,7 +43,7 @@
                 android:textSize="35dp" />
 
             <Button
-
+                android:id="@+id/comentar_button"
                 android:layout_width="230dp"
                 android:layout_height="71dp"
                 android:layout_gravity="center"

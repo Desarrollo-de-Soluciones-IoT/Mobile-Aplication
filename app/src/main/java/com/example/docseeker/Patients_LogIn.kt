@@ -126,7 +126,7 @@ class Patients_LogIn : AppCompatActivity() {
             //CONNECT TO DEPLOYED API
             //.baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
             //CONNECT TO LOCALHOST
-            .baseUrl("http://192.168.1.180:8080/api/v1/")
+            .baseUrl("http://190.237.32.175:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

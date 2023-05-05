@@ -77,7 +77,7 @@ class DashboardPatients : AppCompatActivity() {
 
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.1.180:8080/api/v1/")
+            .baseUrl("http://190.237.32.175:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
