@@ -41,7 +41,7 @@ class DoctorsAdapter(var doctors: Array<Doctors>) : RecyclerView.Adapter<Doctors
 
         //GO TO DOCTOR PROFILE
         holder.doctorCardView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, NewDetails::class.java)
+            val intent = Intent(holder.itemView.context, DoctorProfilePatient::class.java)
             intent.putExtra("doctorId", doctor.id)
             intent.putExtra("doctorName", doctor.name)
             intent.putExtra("doctorAge", doctor.age.toString())
@@ -54,7 +54,7 @@ class DoctorsAdapter(var doctors: Array<Doctors>) : RecyclerView.Adapter<Doctors
         }
 
         //GO TO DOCTOR BOOK APPOINTMENT
-        holder.doctorCardView.setOnClickListener {
+        holder.doctorBookView.setOnClickListener {
             val intent = Intent(holder.itemView.context, NewDetails::class.java)
             intent.putExtra("doctorId", doctor.id)
             holder.itemView.context.startActivity(intent)
