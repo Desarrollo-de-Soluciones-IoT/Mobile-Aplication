@@ -9,28 +9,26 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="673dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="140dp">
-
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="121dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/border_image"
+                    android:background="@drawable/circle"
                     android:clipToOutline="true"
                     android:scaleType="fitXY"
-                    android:src="@drawable/doctor" />
+                    android:src="@drawable/user_type_health_professional" />
             </LinearLayout>
 
             <LinearLayout
@@ -46,26 +44,28 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="3dp"
-                    android:text="Carla Vicuña"
+                    android:text="Name Doctor"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:id="@+id/doctorReviewName"/>
 
                 <TextView
                     android:layout_width="123dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
-                    android:text="Dermatologa"
+                    android:text="Area"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:id="@+id/doctorReviewArea"/>
 
                 <RatingBar
-
                     android:layout_width="wrap_content"
                     android:layout_height="46dp"
                     android:layout_gravity="bottom|start"
+                    android:isIndicator="true"
                     android:numStars="5"
-                    android:rating="4" />
-
+                    android:rating="4"
+                    android:progressTint="@color/yellow"/>
 
             </LinearLayout>
 
