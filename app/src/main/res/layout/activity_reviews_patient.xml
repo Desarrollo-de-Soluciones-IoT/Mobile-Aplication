@@ -7,87 +7,86 @@
     android:clipChildren="false"
     android:clipToPadding="false">
 
-    <LinearLayout
+    <include
+        layout="@layout/top_doctor"
         android:layout_width="match_parent"
+        android:layout_height="128dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000"
+        android:layout_marginHorizontal="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="10dp">
-
-        <include
-            layout="@layout/top_doctor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#000"
-            android:layout_marginHorizontal="10dp"/>
+        android:id="@+id/RCard">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal">
-
-
+        android:id="@+id/Review"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
             <ImageView
-
-                android:layout_width="68dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="6dp"
-                android:background="@drawable/border_image"
-                android:clipToOutline="true"
-                android:foregroundGravity="center"
-                android:scaleType="fitXY"
-                android:src="@drawable/paciente_profile" />
+            android:id="@+id/ReviewImg"
+            android:layout_width="68dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/border_image"
+            android:clipToOutline="true"
+            android:foregroundGravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/paciente_profile" >
+            </ImageView>
 
             <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+
+                android:id="@+id/ReviewName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical">
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:padding="8dp"
-                    android:text="Camilo Alberto Cortés Montejo"
-                    android:textSize="14sp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:padding="8dp"
-                    android:text="Muy buena atención brindada por la profesional"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
+                android:layout_gravity="left"
+                android:padding="8dp"
+                android:text="Camilo Alberto Cortés Montejo"
+                android:textSize="14sp" >
+            </TextView>
+            <TextView
+                android:id="@+id/ReviewDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="8dp"
+                android:text="Muy buena atención brindada por la profesional"
+                android:textSize="14sp"
+                android:textStyle="bold" >
+            </TextView>
             </LinearLayout>
-
-
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000"
+        android:layout_marginHorizontal="10dp"/>
+    <Button
+        android:layout_margin="180dp"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_primary"
+        android:text="Comentar"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:id="@+id/btnComment"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#000"
-            android:layout_marginHorizontal="10dp"/>
-        <Button
-            android:layout_marginTop="15dp"
-            android:layout_width="208dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/button_primary"
-            android:text="Comentar"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:id="@+id/btnComment"/>
-    </LinearLayout>
 
     <include
 

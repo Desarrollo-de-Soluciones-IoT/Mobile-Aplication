@@ -17,7 +17,7 @@
             layout="@layout/top_doctor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -40,7 +40,8 @@
                 android:clipToOutline="true"
                 android:foregroundGravity="center"
                 android:scaleType="fitXY"
-                android:src="@drawable/paciente_profile"/>
+                android:src="@drawable/paciente_profile"
+               />
 
             <TextView
 
@@ -49,7 +50,8 @@
                 android:layout_gravity="center"
                 android:padding="8dp"
                 android:text="Camilo Alberto Cortés Montejo"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                />
 
 
         </LinearLayout>
@@ -66,7 +68,8 @@
                 android:layout_marginTop="15dp"
                 android:background="@drawable/border_comment"
                 android:layout_gravity="center"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                />
 
         </LinearLayout>
 
