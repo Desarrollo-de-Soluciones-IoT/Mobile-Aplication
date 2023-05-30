@@ -1,11 +1,17 @@
 package com.example.docseeker
 
+import Beans.Reviews
+import Interface.ReviewsService
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class NewReview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,5 +47,28 @@ class NewReview : AppCompatActivity() {
         button1.setOnClickListener(toolbarClickListener)
         button2.setOnClickListener(toolbarClickListener)
         button3.setOnClickListener(toolbarClickListener)
+    }
+
+    suspend fun getReviews(): Array<Reviews> {
+
+        //GETTING NEWS DATA FROM ENDPOINT
+        val retrofit = Retrofit.Builder()
+            //CONNECT TO DEPLOYED API
+            //.baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            //CONNECT TO LOCALHOST
+            .baseUrl("http://192.168.1.18:8080/api/v1/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val newsService = retrofit.create(ReviewsService::class.java)
+
+        return withContext(Dispatchers.IO) {
+            val response = newsService.getReviews().execute()
+            if (response.isSuccessful) {
+                response.body()?.toTypedArray() ?: emptyArray()
+            } else {
+                emptyArray()
+            }
+        }
     }
 }
