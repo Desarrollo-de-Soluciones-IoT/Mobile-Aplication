@@ -23,7 +23,7 @@ class ListReview: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_reviews)
 
-        val recyclerView : RecyclerView = findViewById(R.id.recyclerReview)
+        val recyclerView : RecyclerView = findViewById(R.id.recyclerReviews)
         recyclerView.layoutManager=LinearLayoutManager(this)
         reviewsAdapter = ReviewsAdapter(emptyArray())
         recyclerView.adapter = reviewsAdapter
@@ -45,7 +45,10 @@ class ListReview: AppCompatActivity() {
 
     suspend fun getReviews(): Array<Reviews> {
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.1.18:8080/api/v1/")
+            //CONNECT TO DEPLOYED API
+            .baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            //CONNECT TO LOCALHOST
+            //.baseUrl("http://192.168.1.180:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

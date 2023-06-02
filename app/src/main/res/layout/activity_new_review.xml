@@ -36,19 +36,18 @@
                 android:layout_height="96dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="6dp"
-                android:background="@drawable/circle"
                 android:clipToOutline="true"
                 android:foregroundGravity="center"
                 android:scaleType="fitXY"
-                android:src="@drawable/paciente_profile"
+                android:src="@drawable/user_type_patient"
                />
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:padding="8dp"
+                android:id="@+id/newReviewPatientName"
                 android:text="Camilo Alberto Cortés Montejo"
                 android:textSize="14sp"
                 />
@@ -69,6 +68,7 @@
                 android:background="@drawable/border_comment"
                 android:layout_gravity="center"
                 android:textSize="16sp"
+                android:id="@+id/newReviewDescription"
                 />
 
         </LinearLayout>
@@ -81,7 +81,8 @@
             android:numStars="5"
             android:rating="0"
             android:stepSize="1"
-            android:progressTint="@color/yellow"/>
+            android:progressTint="@color/yellow"
+            android:id="@+id/newReviewStars"/>
 
         <Button
             android:id="@+id/btnPublish"

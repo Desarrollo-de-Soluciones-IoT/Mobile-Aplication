@@ -1,5 +1,4 @@
 package com.example.docseeker
-
 import Beans.News
 import Interface.NewsService
 import android.content.Intent
@@ -24,13 +23,13 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class DashboardPatients : AppCompatActivity() {
+class DashboardDoctors : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard_patients)
+        setContentView(R.layout.activity_dashboard_doctors)
 
-        val viewPager = findViewById<ViewPager2>(R.id.view_pager)
+        val viewPager = findViewById<ViewPager2>(R.id.view_pager2)
 
         viewPager.apply {
             clipChildren = false  // No clipping the left and right items
@@ -51,35 +50,35 @@ class DashboardPatients : AppCompatActivity() {
         compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
         viewPager.setPageTransformer(compositePageTransformer)
 
-        val doctorbutton = findViewById<CardView>(R.id.menu_doctor)
+        val doctorbutton = findViewById<CardView>(R.id.menu_prescriptions_doctor)
         doctorbutton.setOnClickListener{
             val intent = Intent(this, ListDoctors::class.java)
             startActivity(intent)
         }
-        val medicalbutton = findViewById<CardView>(R.id.menu_medical_history)
+        val medicalbutton = findViewById<CardView>(R.id.menu_agend)
         medicalbutton.setOnClickListener{
             val intent = Intent(this, MedicalHistoryPatient::class.java)
             startActivity(intent)
         }
-        val prescriptionsbutton = findViewById<CardView>(R.id.menu_prescriptions)
+        val prescriptionsbutton = findViewById<CardView>(R.id.menu_patients)
         prescriptionsbutton.setOnClickListener{
             val intent = Intent(this, ListPrescriptions::class.java)
             startActivity(intent)
         }
-        val appointmentsbutton = findViewById<CardView>(R.id.menu_appointments)
+        val appointmentsbutton = findViewById<CardView>(R.id.menu_finance)
         appointmentsbutton.setOnClickListener{
             val intent = Intent(this, MyAppointments::class.java)
             startActivity(intent)
         }
 
         // FUNCTIONS TO EVERY ACTIVITY WHICH USES TOOLBAR
-        val toolbarClickListener = ToolbarClickListener(this)
+        val toolbarClickListener = DoctorToolbarClickListener(this)
 
         // REFERENCES TO BUTTONS FROM TOOLBAR
-        val button1 = findViewById<ImageButton>(R.id.button1)
-        val button2 = findViewById<ImageButton>(R.id.button2)
-        val button3 = findViewById<ImageButton>(R.id.button3)
-        val button4 = findViewById<ImageButton>(R.id.button4)
+        val button1 = findViewById<ImageButton>(R.id.button1Doctor)
+        val button2 = findViewById<ImageButton>(R.id.button2Doctor)
+        val button3 = findViewById<ImageButton>(R.id.button3Doctor)
+        val button4 = findViewById<ImageButton>(R.id.button4Doctor)
 
 
         // SET OnClickListener WITH ToolbarClickListener

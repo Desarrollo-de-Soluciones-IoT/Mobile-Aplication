@@ -59,9 +59,9 @@ class ListDoctors : AppCompatActivity() {
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()
             //CONNECT TO DEPLOYED API
-            //.baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            .baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
             //CONNECT TO LOCALHOST
-            .baseUrl("http://192.168.1.180:8080/api/v1/")
+            //.baseUrl("http://192.168.1.180:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

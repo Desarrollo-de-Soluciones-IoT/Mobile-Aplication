@@ -24,12 +24,21 @@ class MedicalHistoryPatient : AppCompatActivity() {
         val name = infoProfileComponent.findViewById<TextView>(R.id.profileName)
         val birth = infoProfileComponent.findViewById<TextView>(R.id.profileBirth)
         val number = infoProfileComponent.findViewById<TextView>(R.id.profileNumber)
+        val height = findViewById<TextView>(R.id.profileHeight)
+        val weight = findViewById<TextView>(R.id.profileWeight)
+        val bmi = findViewById<TextView>(R.id.profileBmi)
         val editButton = infoProfileComponent.findViewById<ImageButton>(R.id.editButton)
 
         photo.setImageResource(R.drawable.paciente_profile)
         name.text = sharedPref.getString("name", "Paciente Usuario")
         birth.text = sharedPref.getString("birth_date", "XX/XX/XXXX")
         number.text = sharedPref.getString("phone_number", "999999999")
+        height.text = "Altura: " + sharedPref.getString("height", "165") + "cm"
+        weight.text = "Peso: " + sharedPref.getString("weight", "50") + "kg"
+        bmi.text = "BMI: " + sharedPref.getString("bmi", "20") + "kg"
+
+
+
         editButton.setOnClickListener{ v ->
             val intent = Intent(this, EditProfile::class.java)
             startActivity(intent)

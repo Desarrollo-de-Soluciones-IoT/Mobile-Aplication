@@ -99,8 +99,10 @@ class Patients_LogIn : AppCompatActivity() {
                         editor.putString("email", userLogged.email)
                         editor.putString("name", userLogged.name)
                         editor.putString("password", userLogged.password)
+                        Log.d("TESTEOO", userLogged.height.toString())
                         editor.putString("height", userLogged.height.toString())
                         editor.putString("weight", userLogged.weight.toString())
+                        editor.putString("bmi", userLogged.bmi.toString())
                         editor.putString("birth_date", userLogged.birthDate)
                         editor.putString("phone_number", userLogged.phoneNumber)
                         editor.apply()
@@ -124,9 +126,9 @@ class Patients_LogIn : AppCompatActivity() {
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()
             //CONNECT TO DEPLOYED API
-            //.baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            .baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
             //CONNECT TO LOCALHOST
-            .baseUrl("http://192.168.1.180:8080/api/v1/")
+            //.baseUrl("http://192.168.1.180:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

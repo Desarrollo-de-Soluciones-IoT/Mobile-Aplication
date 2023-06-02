@@ -59,6 +59,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
                     android:layout_marginTop="8dp"
+                    android:id="@+id/profileHeight"
+                    android:gravity="center"
+
                     android:text="Altura : 1.72m" />
             </LinearLayout>
 
@@ -79,8 +82,10 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="19dp"
+                    android:layout_marginLeft="9dp"
                     android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:id="@+id/profileWeight"
                     android:text="Peso: 55 Kg" />
             </LinearLayout>
 
@@ -102,6 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="19dp"
                     android:layout_marginTop="8dp"
+                    android:id="@+id/profileBmi"
                     android:text="Peso: 55 Kg" />
             </LinearLayout>
 
@@ -246,15 +252,7 @@
 
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:layout_width="180dp"
-        android:id="@+id/PDF_history"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:text="GENERAR PDF"
-        android:textColor="@color/white"
-        android:background="@drawable/button_primary"/>
+
     <include
         layout="@layout/toolbar"
         android:layout_width="match_parent"

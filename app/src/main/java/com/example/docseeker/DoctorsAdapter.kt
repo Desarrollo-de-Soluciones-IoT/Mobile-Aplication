@@ -3,6 +3,7 @@ package com.example.docseeker
 import Beans.Doctors
 import Beans.News
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,8 +42,9 @@ class DoctorsAdapter(var doctors: Array<Doctors>) : RecyclerView.Adapter<Doctors
 
         //GO TO DOCTOR PROFILE
         holder.doctorCardView.setOnClickListener {
+            Log.d("DOCTORAdapter", doctor.id.toString())
             val intent = Intent(holder.itemView.context, DoctorProfilePatient::class.java)
-            intent.putExtra("doctorId", doctor.id)
+            intent.putExtra("doctorId", doctor.id.toString())
             intent.putExtra("doctorName", doctor.name)
             intent.putExtra("doctorAge", doctor.age.toString())
             intent.putExtra("doctorPrice", doctor.doctorFee.toString())
@@ -55,8 +57,8 @@ class DoctorsAdapter(var doctors: Array<Doctors>) : RecyclerView.Adapter<Doctors
 
         //GO TO DOCTOR BOOK APPOINTMENT
         holder.doctorBookView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, NewDetails::class.java)
-            intent.putExtra("doctorId", doctor.id)
+            val intent = Intent(holder.itemView.context, BookAppointment::class.java)
+            intent.putExtra("doctorId", doctor.id.toString())
             holder.itemView.context.startActivity(intent)
         }
     }

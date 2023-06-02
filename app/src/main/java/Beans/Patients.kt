@@ -9,6 +9,7 @@ class Patients {
     var email: String
     var name: String
     var password: String
+    var bmi: Float
     var height: Int
     var weight: Int
     var birthDate: String
@@ -22,6 +23,7 @@ class Patients {
         email: String,
         name: String,
         password: String,
+        bmi: Float,
         height: Int,
         weight: Int,
         birthDate: String,
@@ -34,6 +36,7 @@ class Patients {
         this.email = email
         this.name = name
         this.password = password
+        this.bmi = bmi
         this.height = height
         this.weight = weight
         this.birthDate = birthDate

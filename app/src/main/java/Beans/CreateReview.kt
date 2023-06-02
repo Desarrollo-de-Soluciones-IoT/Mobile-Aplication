@@ -1,23 +1,23 @@
 package Beans
 
-class Reviews {
+class CreateReview {
     var id: Int
     var description: String
-    var doctorId: Int
-    var patientName: String
     var rating: Int
+    var doctorId: Int
+    var patientId: Int
 
     constructor(
         id: Int,
         description: String,
+        rating: Int,
         doctorId: Int,
-        patientName:String,
-        rating: Int
+        patientId:Int,
     ){
         this.id= id
         this.description= description
-        this.doctorId=doctorId
-        this.patientName=patientName
         this.rating=rating
+        this.doctorId=doctorId
+        this.patientId=patientId
     }
 }

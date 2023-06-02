@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:text="@string/healthcare_professional"
             android:background="@drawable/button_secondary"
+            android:onClick="goToDoctorLogin"
             android:textColor="@color/white"
             android:layout_marginHorizontal="60dp"
             android:layout_marginTop="15dp"

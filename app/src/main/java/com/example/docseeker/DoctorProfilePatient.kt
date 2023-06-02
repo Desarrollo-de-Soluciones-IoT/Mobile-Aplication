@@ -3,6 +3,7 @@ package com.example.docseeker
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -24,6 +25,9 @@ class DoctorProfilePatient : AppCompatActivity() {
         val doctorProfileButton = findViewById<Button>(R.id.doctorProfileButton)
 
         val doctorId = intent.getStringExtra("doctorId")
+        Log.d("DOCTORPROFILE", intent.getStringExtra("doctorId").toString())
+        Log.d("DOCTORPROFILE2222", doctorId.toString())
+
         doctorProfileImage.setImageResource(R.drawable.user_type_health_professional)
         doctorProfileName.text = intent.getStringExtra("doctorName")
         doctorProfileArea.text = intent.getStringExtra("doctorArea")

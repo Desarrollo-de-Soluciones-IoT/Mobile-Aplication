@@ -15,4 +15,8 @@ class UserSelection: AppCompatActivity() {
         val intent = Intent(this, Patients_LogIn::class.java)
         startActivity(intent)
     }
+    fun goToDoctorLogin(view: View) {
+        val intent = Intent(this, Doctors_LogIn::class.java)
+        startActivity(intent)
+    }
 }
