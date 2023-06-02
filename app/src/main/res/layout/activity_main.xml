@@ -53,6 +53,7 @@
             android:background="@drawable/button_primary"
             android:text="Sign Up"
             android:textSize="20sp"
+            android:onClick="goToUserSelectionRegister"
             android:textColor="@color/white"/>
 
         <Button

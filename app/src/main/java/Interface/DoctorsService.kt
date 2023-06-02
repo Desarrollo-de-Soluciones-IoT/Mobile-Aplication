@@ -11,4 +11,5 @@ interface DoctorsService {
     fun getDoctors(): Call<List<Doctors>>
     @GET("doctors/{id}")
     fun getDoctorById(@Path("id") id: Int): Call<Doctors>
+
 }

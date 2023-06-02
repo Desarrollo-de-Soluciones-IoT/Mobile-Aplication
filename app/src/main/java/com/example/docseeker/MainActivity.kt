@@ -12,6 +12,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    fun goToUserSelectionRegister(view: View) {
+        val intent = Intent(this, UserSelectionRegister::class.java)
+        startActivity(intent)
+    }
+
     fun goToUserSelection(view: View) {
         val intent = Intent(this, UserSelection::class.java)
         startActivity(intent)

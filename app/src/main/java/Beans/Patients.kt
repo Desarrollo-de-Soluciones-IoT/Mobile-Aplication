@@ -9,12 +9,14 @@ class Patients {
     var email: String
     var name: String
     var password: String
-    var bmi: Float
-    var height: Int
-    var weight: Int
+    var bmi: Float?
+    var height: Int?
+    var weight: Int?
     var birthDate: String
     var phoneNumber: String
     var userType:String
+    var reviews:List<Reviews>
+    var allergies:List<String>
 
     constructor(
         id: Int,
@@ -23,12 +25,14 @@ class Patients {
         email: String,
         name: String,
         password: String,
-        bmi: Float,
-        height: Int,
-        weight: Int,
+        bmi: Float?,
+        height: Int?,
+        weight: Int?,
         birthDate: String,
         phoneNumber: String,
-        userType: String
+        userType: String,
+        reviews:List<Reviews>,
+        allergies:List<String>
     ) {
         this.id = id
         this.age = age
@@ -42,6 +46,8 @@ class Patients {
         this.birthDate = birthDate
         this.phoneNumber = phoneNumber
         this.userType = userType
+        this.reviews = reviews
+        this.allergies = allergies
     }
 
 

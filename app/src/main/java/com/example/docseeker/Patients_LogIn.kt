@@ -46,41 +46,6 @@ class Patients_LogIn : AppCompatActivity() {
         val txtComment: TextView =findViewById(R.id.txtComment)
         val btnLogIn: Button =findViewById(R.id.logInButton)
 
-        /*
-        arrayOfPatients = getPatients()
-
-        btnLogIn.setOnClickListener() {
-            val user: String = txtEmail.text.toString()
-            val password: String = txtPassword.text.toString()
-            arrayOfPatients?.let { patients ->
-                for (patient in patients) {
-                    if (patient.email == user && patient.password == password) {
-                        userLogged = patient
-                        // SAVE SharedPreferences
-                        editor.putString("age", userLogged.age.toString())
-                        editor.putString("DNI", userLogged.DNI)
-                        editor.putString("email", userLogged.email)
-                        editor.putString("name", userLogged.name)
-                        editor.putString("password", userLogged.password)
-                        editor.putString("height", userLogged.height.toString())
-                        editor.putString("weight", userLogged.weight.toString())
-                        editor.putString("birth_date", userLogged.birth_date)
-                        editor.putString("phone_number", userLogged.phone_number.toString())
-                        editor.apply()
-
-                        val intent= Intent(this@Patients_LogIn, DashboardPatients::class.java)
-                        startActivity(intent)
-                        break
-                    }
-                    else{
-                        txtEmail.text.clear()
-                        txtPassword.text.clear()
-                        txtComment.text="Usuario y/o password incorrectos"
-                    }
-                }
-            }
-        }
-        */
 
         //GETTING PATIENTS DATA FROM ENDPOINT
         GlobalScope.launch(Dispatchers.Main) {
@@ -137,6 +102,7 @@ class Patients_LogIn : AppCompatActivity() {
         return withContext(Dispatchers.IO) {
             val response = newsService.getPatients().execute()
             if (response.isSuccessful) {
+                Log.d("LOGIN", "CARGO TODO BIEN")
                 response.body()?.toTypedArray() ?: emptyArray()
             } else {
                 emptyArray()
