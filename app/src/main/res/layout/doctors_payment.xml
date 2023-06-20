@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="673dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="247dp"
+                android:layout_height="233dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/border_alert"
+                android:clipToOutline="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/DOLAR" />
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="101dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="INGRESOS ACTUALES S/3500.00"
+                android:textAlignment="center"
+                android:textSize="28dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#000" />
+
+            <Button
+                android:id="@+id/comentar_button"
+                android:layout_width="230dp"
+                android:layout_height="71dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="85dp"
+                android:backgroundTint="@color/primary"
+                android:text="Ver Historial de Pagos"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+
+
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+
+
+        layout="@layout/toolbar_doctor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+</LinearLayout>
+
