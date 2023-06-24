@@ -1,63 +1,52 @@
 package com.example.docseeker
 
-import Beans.News
-import Beans.Patients
-import Interface.NewsService
-import Interface.PatientsService
+import Beans.Appointment
+import Interface.AppointmentsService
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import android.widget.TextView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import com.example.docseeker.BaseUrl
 
-class NewsPatients : AppCompatActivity() {
-    private lateinit var newsAdapter: NewsAdapter
-
-
+class DoctorsSalary : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_news_patients)
+        setContentView(R.layout.doctors_payment)
 
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerNews)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        newsAdapter = NewsAdapter(emptyArray())
-        recyclerView.adapter = newsAdapter
+        val sharedPref = getSharedPreferences("userLogged", Context.MODE_PRIVATE)
+        val salary = findViewById<TextView>(R.id.salaryNumber)
 
-        //SETTING ALL NEWS
-        GlobalScope.launch(Dispatchers.Main) {
-            val arrayOfNews = getNews()
-            newsAdapter.updateNews(arrayOfNews)
+        GlobalScope.launch(Dispatchers.Main){
+            val doctorId = (sharedPref.getString("id", "DoctorID")).toString().toInt()
+            val arrayOfAppointments = getAppointmentsByDoctorId(doctorId)
+            salary.text = "S/ " + (arrayOfAppointments.size * (sharedPref.getString("doctor_fee", "X")).toString().toInt()).toString()
 
         }
 
         // FUNCTIONS TO EVERY ACTIVITY WHICH USES TOOLBAR
-        val toolbarClickListener = ToolbarClickListener(this)
+        val toolbarClickListener = DoctorToolbarClickListener(this)
 
         // REFERENCES TO BUTTONS FROM TOOLBAR
-        val button1 = findViewById<ImageButton>(R.id.button1)
-        val button2 = findViewById<ImageButton>(R.id.button2)
-        val button3 = findViewById<ImageButton>(R.id.button3)
-        val button4 = findViewById<ImageButton>(R.id.button4)
+        val button1 = findViewById<ImageButton>(R.id.button1Doctor)
+        val button2 = findViewById<ImageButton>(R.id.button2Doctor)
+        val button3 = findViewById<ImageButton>(R.id.button3Doctor)
+        val button4 = findViewById<ImageButton>(R.id.button4Doctor)
 
 
         // SET OnClickListener WITH ToolbarClickListener
         button1.setOnClickListener(toolbarClickListener)
         button2.setOnClickListener(toolbarClickListener)
         button3.setOnClickListener(toolbarClickListener)
+
     }
 
-
-
-    suspend fun getNews(): Array<News> {
-
-        //GETTING NEWS DATA FROM ENDPOINT
+    suspend fun getAppointmentsByDoctorId(doctorId: Int): Array<Appointment> {
         val retrofit = Retrofit.Builder()
             //CONNECT TO DEPLOYED API
             .baseUrl(BaseUrl.base_url)
@@ -66,10 +55,9 @@ class NewsPatients : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        val newsService = retrofit.create(NewsService::class.java)
-
+        val newsService = retrofit.create(AppointmentsService::class.java)
         return withContext(Dispatchers.IO) {
-            val response = newsService.getNews().execute()
+            val response = newsService.getAppointmentsByDoctorId(doctorId).execute()
             if (response.isSuccessful) {
                 response.body()?.toTypedArray() ?: emptyArray()
             } else {

@@ -20,21 +20,29 @@
             android:padding="8dp">
 
             <ImageView
-                android:layout_width="247dp"
-                android:layout_height="233dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/border_alert"
                 android:clipToOutline="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/DOLAR" />
+                android:src="@drawable/dolar" />
 
             <TextView
-                android:layout_width="293dp"
-                android:layout_height="101dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:text="INGRESOS ACTUALES S/3500.00"
+                android:text="INGRESOS ACTUALES:"
+                android:textAlignment="center"
+                android:textSize="28dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/salaryNumber"
+                android:text="3500.00"
                 android:textAlignment="center"
                 android:textSize="28dp" />
 
@@ -44,19 +52,6 @@
                 android:layout_marginHorizontal="10dp"
                 android:background="#000" />
 
-            <Button
-                android:id="@+id/comentar_button"
-                android:layout_width="230dp"
-                android:layout_height="71dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="85dp"
-                android:backgroundTint="@color/primary"
-                android:text="Ver Historial de Pagos"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-
-
-                />
 
 
         </LinearLayout>

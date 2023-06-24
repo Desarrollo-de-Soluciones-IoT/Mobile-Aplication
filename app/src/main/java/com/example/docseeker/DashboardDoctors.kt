@@ -22,6 +22,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.example.docseeker.BaseUrl
 
 class DashboardDoctors : AppCompatActivity() {
 
@@ -50,24 +51,24 @@ class DashboardDoctors : AppCompatActivity() {
         compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
         viewPager.setPageTransformer(compositePageTransformer)
 
-        val doctorbutton = findViewById<CardView>(R.id.menu_prescriptions_doctor)
-        doctorbutton.setOnClickListener{
+        val prescriptionbutton = findViewById<CardView>(R.id.menu_prescriptions_doctor)
+        prescriptionbutton.setOnClickListener{
             val intent = Intent(this, ListDoctors::class.java)
             startActivity(intent)
         }
-        val medicalbutton = findViewById<CardView>(R.id.menu_agend)
-        medicalbutton.setOnClickListener{
-            val intent = Intent(this, MedicalHistoryPatient::class.java)
+        val agendbutton = findViewById<CardView>(R.id.menu_agend)
+        agendbutton.setOnClickListener{
+            val intent = Intent(this, ScheduleDoctor::class.java)
             startActivity(intent)
         }
-        val prescriptionsbutton = findViewById<CardView>(R.id.menu_patients)
-        prescriptionsbutton.setOnClickListener{
-            val intent = Intent(this, ListPrescriptions::class.java)
+        val patientsbutton = findViewById<CardView>(R.id.menu_patients)
+        patientsbutton.setOnClickListener{
+            val intent = Intent(this, MyPatients::class.java)
             startActivity(intent)
         }
-        val appointmentsbutton = findViewById<CardView>(R.id.menu_finance)
-        appointmentsbutton.setOnClickListener{
-            val intent = Intent(this, MyAppointments::class.java)
+        val salarybutton = findViewById<CardView>(R.id.menu_finance)
+        salarybutton.setOnClickListener{
+            val intent = Intent(this, DoctorsSalary::class.java)
             startActivity(intent)
         }
 
@@ -92,7 +93,7 @@ class DashboardDoctors : AppCompatActivity() {
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()
             //CONNECT TO DEPLOYED API
-            .baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            .baseUrl(BaseUrl.base_url)
             //CONNECT TO LOCALHOST
             //.baseUrl("http://192.168.1.180:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())

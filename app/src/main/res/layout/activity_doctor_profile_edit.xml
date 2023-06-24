@@ -24,7 +24,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_width="90dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/doctor"/>
+                    android:src="@drawable/user_type_health_professional"/>
             </LinearLayout>
 
             <LinearLayout
@@ -37,11 +37,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
+                    android:id="@+id/doctorProfileEditName"
                     android:text="Dr. Valentina Laverde"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
+                    android:id="@+id/doctorProfileEditSpeciality"
                     android:text="Podólogo"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -51,10 +53,20 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/paciente_logo"/>
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pacientes&#10;345+"/>
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pacientes:"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/doctorProfileEditPatients"
+                            android:text="345+"/>
+                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
@@ -93,8 +105,8 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="15dp"
                     android:textSize="10dp"
+                    android:id="@+id/doctorProfileEditPrice"
                     android:text="S/ 84.00"/>
-
 
             </LinearLayout>
         </LinearLayout>
@@ -121,10 +133,11 @@
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:id="@+id/doctorProfileEditDescription"
                 android:text="Comprometidos en el tratamiento eficaz de la discapacidad, depresión, síndrome de fatiga crónica, miedos, ansiedad, apatía y letargo, trastornos del sueño, esquizofrenia, trastornos mentales en ancianos y seniles. Además, realiza una recepción en inglés."
                 android:textSize="11dp"
                 android:textStyle="bold" />
@@ -163,12 +176,17 @@
     <Button
         android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_primary"
         android:text="Actualizar"
         android:textSize="13dp"
+        android:id="@+id/doctorProfileEditButtonSave"
+        android:layout_gravity="center"
+        android:onClick="goToProfileDoctor"
         android:textColor="@color/white" />
-
+    <include
+        layout="@layout/toolbar_doctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -1,9 +1,6 @@
 package Interface
 
-import Beans.Appointment
-import Beans.Doctors
-import Beans.News
-import Beans.Reviews
+import Beans.*
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -17,4 +14,10 @@ interface AppointmentsService {
     fun createAppointment(@Body appointment: Appointment): Call<Void>
     @GET("appointments/patient/{patientId}")
     fun getAppointmentsByPatientId(@Path("patientId") patientId: Int): Call<List<Appointment>>
+    @GET("appointments/doctor/{doctorId}")
+    fun getAppointmentsByDoctorId(@Path("doctorId") doctorId: Int): Call<List<Appointment>>
+    @GET("appointments/doctor/{doctorId}/date/{date}")
+    fun getAppointmentsByDoctorIdAndDate(@Path("doctorId") doctorId: Int, @Path("date") date: String): Call<List<Appointment>>
+    @GET("appointments/doctor/{doctorId}/patients")
+    fun getPatientsByDoctorId(@Path("doctorId") doctorId: Int): Call<List<Patients>>
 }

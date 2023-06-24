@@ -23,6 +23,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.example.docseeker.BaseUrl
 
 class DashboardPatients : AppCompatActivity() {
 
@@ -93,7 +94,7 @@ class DashboardPatients : AppCompatActivity() {
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()
             //CONNECT TO DEPLOYED API
-            .baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            .baseUrl(BaseUrl.base_url)
             //CONNECT TO LOCALHOST
             //.baseUrl("http://192.168.1.180:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())

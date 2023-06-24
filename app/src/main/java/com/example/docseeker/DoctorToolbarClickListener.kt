@@ -14,11 +14,11 @@ class DoctorToolbarClickListener(private val context: Context):View.OnClickListe
                 context.startActivity(intent)
             }
             R.id.button2Doctor -> {
-                val intent = Intent(context, NewsPatients::class.java)
+                val intent = Intent(context, NewsDoctors::class.java)
                 context.startActivity(intent)
             }
             R.id.button3Doctor -> {
-                val intent = Intent(context, ProfilePatients::class.java)
+                val intent = Intent(context, DoctorProfile::class.java)
                 context.startActivity(intent)
 
             }

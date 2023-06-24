@@ -89,6 +89,7 @@
         android:layout_height="2dp"
         android:background="#000"
         android:layout_marginHorizontal="10dp"/>
+   <!--
     <Button
         android:layout_margin="10dp"
         android:layout_width="208dp"
@@ -99,7 +100,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:id="@+id/btnComment"/>
-
+-->
 
     <include
 

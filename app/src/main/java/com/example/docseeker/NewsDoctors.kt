@@ -1,11 +1,10 @@
 package com.example.docseeker
 
-import Beans.Doctors
-import Beans.News
-import Interface.DoctorsService
-import Interface.NewsService
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import Beans.News
+import Beans.Patients
+import Interface.NewsService
+import Interface.PatientsService
 import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,36 +14,36 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import com.example.docseeker.BaseUrl
+import android.os.Bundle
 
-class ListDoctors : AppCompatActivity() {
-    private lateinit var doctorsAdapter: DoctorsAdapter
+class NewsDoctors : AppCompatActivity() {
+    private lateinit var newsAdapter: NewsAdapterDoctor
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_doctors)
+        setContentView(R.layout.activity_news_doctors)
 
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerDoctors)
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerNewsDoctor)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        doctorsAdapter = DoctorsAdapter(emptyArray())
-        recyclerView.adapter = doctorsAdapter
+        newsAdapter = NewsAdapterDoctor(emptyArray())
+        recyclerView.adapter = newsAdapter
 
-        //SETTING ALL DOCTORS
+        //SETTING ALL NEWS
         GlobalScope.launch(Dispatchers.Main) {
-            val arrayOfDoctors = getDoctors()
-            doctorsAdapter.updateDoctors(arrayOfDoctors)
+            val arrayOfNews = getNews()
+            newsAdapter.updateNews(arrayOfNews)
 
         }
 
         // FUNCTIONS TO EVERY ACTIVITY WHICH USES TOOLBAR
-        val toolbarClickListener = ToolbarClickListener(this)
+        val toolbarClickListener = DoctorToolbarClickListener(this)
 
         // REFERENCES TO BUTTONS FROM TOOLBAR
-        val button1 = findViewById<ImageButton>(R.id.button1)
-        val button2 = findViewById<ImageButton>(R.id.button2)
-        val button3 = findViewById<ImageButton>(R.id.button3)
-        val button4 = findViewById<ImageButton>(R.id.button4)
+        val button1 = findViewById<ImageButton>(R.id.button1Doctor)
+        val button2 = findViewById<ImageButton>(R.id.button2Doctor)
+        val button3 = findViewById<ImageButton>(R.id.button3Doctor)
+        val button4 = findViewById<ImageButton>(R.id.button4Doctor)
 
 
         // SET OnClickListener WITH ToolbarClickListener
@@ -53,9 +52,7 @@ class ListDoctors : AppCompatActivity() {
         button3.setOnClickListener(toolbarClickListener)
     }
 
-
-
-    suspend fun getDoctors(): Array<Doctors> {
+    suspend fun getNews(): Array<News> {
 
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()
@@ -66,10 +63,10 @@ class ListDoctors : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        val newsService = retrofit.create(DoctorsService::class.java)
+        val newsService = retrofit.create(NewsService::class.java)
 
         return withContext(Dispatchers.IO) {
-            val response = newsService.getDoctors().execute()
+            val response = newsService.getNews().execute()
             if (response.isSuccessful) {
                 response.body()?.toTypedArray() ?: emptyArray()
             } else {

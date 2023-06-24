@@ -15,6 +15,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.time.Instant
+import com.example.docseeker.BaseUrl
 
 class ListReview: AppCompatActivity() {
     private lateinit var reviewsAdapter : ReviewsAdapter
@@ -46,7 +47,7 @@ class ListReview: AppCompatActivity() {
     suspend fun getReviews(): Array<Reviews> {
         val retrofit = Retrofit.Builder()
             //CONNECT TO DEPLOYED API
-            .baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            .baseUrl(BaseUrl.base_url)
             //CONNECT TO LOCALHOST
             //.baseUrl("http://192.168.1.180:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())

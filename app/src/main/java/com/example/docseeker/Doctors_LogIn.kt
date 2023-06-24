@@ -24,6 +24,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.CountDownLatch
+import com.example.docseeker.BaseUrl
 
 class Doctors_LogIn : AppCompatActivity() {
     lateinit var userLogged: Doctors
@@ -66,6 +67,12 @@ class Doctors_LogIn : AppCompatActivity() {
                         editor.putString("email", userLogged.email)
                         editor.putString("name", userLogged.name)
                         editor.putString("password", userLogged.password)
+                        editor.putString("description", userLogged.description)
+                        editor.putString("doctor_fee", userLogged.doctorFee.toString())
+                        editor.putString("patients_assisted", userLogged.patientsAssisted.toString())
+                        editor.putString("experience_years", userLogged.experienceYears.toString())
+                        editor.putString("speciality", userLogged.speciality)
+
                         editor.apply()
 
                         val intent= Intent(this@Doctors_LogIn, DashboardDoctors::class.java)
@@ -87,7 +94,7 @@ class Doctors_LogIn : AppCompatActivity() {
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()
             //CONNECT TO DEPLOYED API
-            .baseUrl("https://spring-docseeker-dockseeker-be.azuremicroservices.io/api/v1/")
+            .baseUrl(BaseUrl.base_url)
             //CONNECT TO LOCALHOST
             //.baseUrl("http://192.168.1.180:8080/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
