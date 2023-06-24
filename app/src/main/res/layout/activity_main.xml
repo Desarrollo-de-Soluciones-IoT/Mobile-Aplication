@@ -41,6 +41,7 @@
             android:layout_marginBottom="30dp"
             android:text="@string/welcome_message"
             android:textAlignment="center"
+            android:fontFamily="@font/poppins"
             android:textColor="#000"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -52,6 +53,7 @@
             android:layout_gravity="center"
             android:background="@drawable/button_primary"
             android:text="Sign Up"
+            android:fontFamily="@font/poppins"
             android:textSize="20sp"
             android:onClick="goToUserSelectionRegister"
             android:textColor="@color/white"/>
@@ -62,6 +64,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
             android:background="@drawable/button_secondary"
+            android:fontFamily="@font/poppins"
             android:text="Log In"
             android:textSize="20sp"
             android:onClick="goToUserSelection"

@@ -16,14 +16,7 @@
         android:layout_gravity="center"
         android:layout_marginVertical="20dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DocSeeker"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -37,6 +30,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/input_shape"
             android:padding="16dp"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:hint="Nombre"
@@ -49,6 +43,7 @@
             <EditText
                 android:id="@+id/ageInputRegisterDoctor"
                 android:layout_width="100dp"
+                android:fontFamily="@font/poppins"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_shape"
                 android:padding="16dp"
@@ -61,6 +56,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_shape"
+                android:fontFamily="@font/poppins"
                 android:padding="16dp"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -72,6 +68,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_shape"
                 android:padding="16dp"
+                android:fontFamily="@font/poppins"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:hint="Nacimiento"
@@ -85,6 +82,7 @@
             android:background="@drawable/input_shape"
             android:padding="16dp"
             android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
             android:textSize="16sp"
             android:hint="DNI"
             android:layout_margin="15dp"/>
@@ -94,6 +92,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/input_shape"
             android:padding="16dp"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:hint="Correo electrónico"
@@ -105,6 +104,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/input_shape"
             android:padding="16dp"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:hint="Contraseña"
@@ -112,22 +112,14 @@
             android:layout_margin="15dp"/>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="20dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:id="@+id/txtComment"
-        />
+
 
     <Button
         android:id="@+id/RegisterButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/poppins"
         android:text="Registrarse"
         android:background="@drawable/button_primary"
         android:layout_marginTop="50dp"

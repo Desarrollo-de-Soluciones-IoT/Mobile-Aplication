@@ -59,6 +59,8 @@ class MedicalHistoryPatient : AppCompatActivity() {
         button1.setOnClickListener(toolbarClickListener)
         button2.setOnClickListener(toolbarClickListener)
         button3.setOnClickListener(toolbarClickListener)
+        button4.setOnClickListener(toolbarClickListener)
+
     }
 
 }

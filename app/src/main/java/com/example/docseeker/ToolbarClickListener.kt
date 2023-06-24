@@ -23,7 +23,8 @@ class ToolbarClickListener(private val context: Context):View.OnClickListener {
 
             }
             R.id.button4 -> {
-
+                val intent = Intent(context, MainActivity::class.java)
+                context.startActivity(intent)
             }
 
         }

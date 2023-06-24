@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/healthcare_professional"
+            android:fontFamily="@font/poppins"
             android:background="@drawable/button_secondary"
             android:onClick="goToDoctorLogin"
             android:textColor="@color/white"
@@ -43,6 +44,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:text="@string/patient"
             android:background="@drawable/button_secondary"
             android:onClick="goToPatientLogin"

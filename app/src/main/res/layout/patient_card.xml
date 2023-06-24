@@ -36,6 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="NAME PATIENT"
+                    android:fontFamily="@font/poppins"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17dp"
@@ -44,11 +45,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:text="XXXXXXX"
                     android:id="@+id/patientCardDNI">
                 </TextView>
                 <TextView
                     android:layout_width="match_parent"
+                    android:fontFamily="@font/poppins"
                     android:layout_height="wrap_content"
                     android:text="XX"
                     android:id="@+id/patientCardAge">

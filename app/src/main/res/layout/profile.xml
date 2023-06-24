@@ -23,13 +23,13 @@
             android:padding="15dp">
 
             <ImageView
-                android:layout_width="76dp"
-                android:layout_height="101dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/border"
                 android:clipToOutline="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/paciente_profile"
+                android:src="@drawable/user_type_patient"
                 android:id="@+id/profilePicture"/>
 
             <LinearLayout
@@ -46,6 +46,7 @@
                     <TextView
                         android:layout_width="153dp"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
                         android:text="Camilo Alberto Cortés Montejo"
                         android:textSize="19dp"
                         android:textStyle="bold"
@@ -80,6 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
                         android:textSize="15dp"
                         android:text="01/01/1980"
                         android:gravity="center"
@@ -104,6 +106,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
                         android:textSize="15dp"
                         android:text="989  710  635"
                         android:gravity="center"

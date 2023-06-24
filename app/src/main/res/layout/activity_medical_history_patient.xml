@@ -29,6 +29,7 @@
             android:layout_width="401dp"
             android:layout_height="30dp"
             android:layout_marginLeft="0dp"
+            android:fontFamily="@font/poppins"
             android:layout_marginTop="0dp"
             android:background="#0093AB"
             android:text="  Información General"
@@ -55,8 +56,9 @@
                     android:src="@drawable/history_height" />
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:layout_marginLeft="12dp"
                     android:layout_marginTop="8dp"
                     android:id="@+id/profileHeight"
@@ -83,6 +85,7 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="9dp"
+                    android:fontFamily="@font/poppins"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
                     android:id="@+id/profileWeight"
@@ -103,9 +106,10 @@
                     android:src="@drawable/history_body_mass" />
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="19dp"
+
+                    android:fontFamily="@font/poppins"
                     android:layout_marginTop="8dp"
                     android:id="@+id/profileBmi"
                     android:text="Peso: 55 Kg" />
@@ -144,6 +148,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="0dp"
                     android:layout_marginTop="0dp"
+                    android:fontFamily="@font/poppins"
                     android:background="#FD5D5D"
                     android:text="ALERGIAS"
                     android:textColor="@color/white"
@@ -174,6 +179,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="12dp"
                             android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins"
                             android:text="MEDICAMENTOS:"
                             android:textColor="#FD5D5D"
                             android:textSize="10dp" />
@@ -182,6 +188,7 @@
                             android:layout_width="170dp"
                             android:layout_height="20dp"
                             android:layout_marginLeft="20dp"
+                            android:fontFamily="@font/poppins"
                             android:text="- Penicilina y derivados"
                             android:textSize="10dp"
                             android:textStyle="bold" />
@@ -198,6 +205,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="12dp"
                         android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppins"
                         android:text="Factores Naturales:"
                         android:textColor="#FD5D5D"
                         android:textSize="10dp" />
@@ -206,6 +214,7 @@
                         android:layout_width="170dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/poppins"
                         android:text="- Polvo"
                         android:textSize="10dp"
                         android:textStyle="bold" />
@@ -227,6 +236,7 @@
             android:layout_height="30dp"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"
+            android:fontFamily="@font/poppins"
             android:background="#0093AB"
             android:text="  Información General"
             android:textColor="@color/white"
@@ -242,6 +252,7 @@
                 android:layout_width="200dp"
                 android:layout_marginLeft="30dp"
                 android:layout_height="100dp"
+                android:fontFamily="@font/poppins"
                 android:layout_marginTop="40dp"
                 android:text="- Hipertensión arterial
                              - Diabetes tipo 2

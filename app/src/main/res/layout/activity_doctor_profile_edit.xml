@@ -37,12 +37,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
+                    android:fontFamily="@font/poppins"
                     android:id="@+id/doctorProfileEditName"
                     android:text="Dr. Valentina Laverde"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
+                    android:fontFamily="@font/poppins"
                     android:id="@+id/doctorProfileEditSpeciality"
                     android:text="Podólogo"/>
                 <LinearLayout
@@ -60,10 +62,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
                             android:text="Pacientes:"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
                             android:id="@+id/doctorProfileEditPatients"
                             android:text="345+"/>
                     </LinearLayout>
@@ -90,6 +94,7 @@
                     android:layout_marginLeft="35dp"
                     android:layout_width="50dp"
                     android:layout_height="20dp"
+                    android:fontFamily="@font/poppins"
                     android:textSize="15dp"
                     android:text="Costo:"/>
             </LinearLayout>
@@ -104,8 +109,10 @@
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins"
                     android:textSize="10dp"
                     android:id="@+id/doctorProfileEditPrice"
+                    android:inputType="number"
                     android:text="S/ 84.00"/>
 
             </LinearLayout>
@@ -124,50 +131,57 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Educación"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <EditText
-                android:layout_width="wrap_content"
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Educación"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/doctorProfileEditDescription"
+                    android:text="Comprometidos en el tratamiento eficaz de la discapacidad, depresión, síndrome de fatiga crónica, miedos, ansiedad, apatía y letargo, trastornos del sueño, esquizofrenia, trastornos mentales en ancianos y seniles. Además, realiza una recepción en inglés."
+                    android:fontFamily="@font/poppins"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/doctorProfileEditDescription"
-                android:text="Comprometidos en el tratamiento eficaz de la discapacidad, depresión, síndrome de fatiga crónica, miedos, ansiedad, apatía y letargo, trastornos del sueño, esquizofrenia, trastornos mentales en ancianos y seniles. Además, realiza una recepción en inglés."
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Ubicación"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginTop="100dp"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-
-                android:text="Ubicación"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="170dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="90dp"
-                android:src="@drawable/mapa" />
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/mapa" />
 
 
+            </LinearLayout>
         </LinearLayout>
 
 
@@ -181,6 +195,7 @@
         android:text="Actualizar"
         android:textSize="13dp"
         android:id="@+id/doctorProfileEditButtonSave"
+        android:fontFamily="@font/poppins"
         android:layout_gravity="center"
         android:onClick="goToProfileDoctor"
         android:textColor="@color/white" />

@@ -39,6 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
+                    android:fontFamily="@font/poppins"
                     android:padding="8dp"
                     android:text="Camilo Alberto Cortés Montejo"
                     android:textSize="14sp" >
@@ -47,6 +48,7 @@
                     android:id="@+id/ReviewDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:layout_gravity="left"
                     android:padding="8dp"
                     android:text="Muy buena atención brindada por la profesional"

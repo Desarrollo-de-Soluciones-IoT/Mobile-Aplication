@@ -23,7 +23,8 @@ class DoctorToolbarClickListener(private val context: Context):View.OnClickListe
 
             }
             R.id.button4 -> {
-
+                val intent = Intent(context, MainActivity::class.java)
+                context.startActivity(intent)
             }
 
         }

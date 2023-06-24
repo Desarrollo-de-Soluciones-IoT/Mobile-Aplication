@@ -52,6 +52,7 @@ class ScheduleDoctor : AppCompatActivity() {
         // FUNCTIONS TO EVERY ACTIVITY WHICH USES TOOLBAR
         val toolbarClickListener = DoctorToolbarClickListener(this)
 
+        /*
         // REFERENCES TO BUTTONS FROM TOOLBAR
         val button1 = findViewById<ImageButton>(R.id.button1Doctor)
         val button2 = findViewById<ImageButton>(R.id.button2Doctor)
@@ -63,6 +64,8 @@ class ScheduleDoctor : AppCompatActivity() {
         button1.setOnClickListener(toolbarClickListener)
         button2.setOnClickListener(toolbarClickListener)
         button3.setOnClickListener(toolbarClickListener)
+        button4.setOnClickListener(toolbarClickListener)*/
+
     }
 
     fun obtenerFechaEnFormato(year: Int, month: Int, day: Int): String {

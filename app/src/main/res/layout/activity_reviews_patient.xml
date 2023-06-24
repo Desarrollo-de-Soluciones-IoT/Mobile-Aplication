@@ -10,7 +10,7 @@
     <include
         layout="@layout/top_doctor"
         android:layout_width="match_parent"
-        android:layout_height="128dp" />
+        android:layout_height="wrap_content" />
 
     <View
         android:layout_width="match_parent"
@@ -93,6 +93,7 @@
         android:layout_margin="10dp"
         android:layout_width="208dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:layout_gravity="center"
         android:background="@drawable/button_primary"
         android:text="Comentar"
