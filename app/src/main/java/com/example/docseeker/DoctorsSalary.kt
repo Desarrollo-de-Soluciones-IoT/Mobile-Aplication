@@ -5,6 +5,7 @@ import Interface.AppointmentsService
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.TextView
 import kotlinx.coroutines.Dispatchers
@@ -25,7 +26,12 @@ class DoctorsSalary : AppCompatActivity() {
         GlobalScope.launch(Dispatchers.Main){
             val doctorId = (sharedPref.getString("id", "DoctorID")).toString().toInt()
             val arrayOfAppointments = getAppointmentsByDoctorId(doctorId)
-            salary.text = "S/ " + (arrayOfAppointments.size * (sharedPref.getString("doctor_fee", "X")).toString().toInt()).toString()
+            Log.d("PRECIO", sharedPref.getString("doctor_fee", "X").toString())
+            Log.d("TAMAÑO", arrayOfAppointments.size.toString())
+
+            val price = (arrayOfAppointments.size.toDouble() * (sharedPref.getString("doctor_fee", "X")).toString().toDouble())
+            Log.d("GANANCIAS", price.toString())
+            salary.text = "S/ " + price.toString()
 
         }
 

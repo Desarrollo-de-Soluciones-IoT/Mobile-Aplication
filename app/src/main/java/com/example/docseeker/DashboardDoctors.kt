@@ -51,11 +51,7 @@ class DashboardDoctors : AppCompatActivity() {
         compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
         viewPager.setPageTransformer(compositePageTransformer)
 
-        val prescriptionbutton = findViewById<CardView>(R.id.menu_prescriptions_doctor)
-        prescriptionbutton.setOnClickListener{
-            val intent = Intent(this, ListDoctors::class.java)
-            startActivity(intent)
-        }
+
         val agendbutton = findViewById<CardView>(R.id.menu_agend)
         agendbutton.setOnClickListener{
             val intent = Intent(this, ScheduleDoctor::class.java)

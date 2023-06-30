@@ -71,7 +71,7 @@
             android:id="@+id/dateDoctor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Make Appointment"
+            android:text="Crear Cita"
             android:textSize="10dp"
             android:fontFamily="@font/poppins"
             android:background="@color/secondary"
