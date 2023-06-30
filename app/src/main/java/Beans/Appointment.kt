@@ -3,7 +3,7 @@ package Beans
 import java.util.Date
 
 class Appointment {
-    var id: Int
+    var id: Int?
     var date: String
     var startTime: String
     var endTime: String
@@ -11,7 +11,7 @@ class Appointment {
     var patientId: Int
 
     constructor(
-        id: Int,
+        id: Int?,
         date: String,
         startTime: String,
         endTime: String,

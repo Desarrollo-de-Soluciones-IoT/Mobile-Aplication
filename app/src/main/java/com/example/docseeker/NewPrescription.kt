@@ -54,7 +54,7 @@ class NewPrescription : AppCompatActivity() {
 
         publishButton.setOnClickListener {
             GlobalScope.launch(Dispatchers.Main) {
-                val sizePrescriptions = getPrescriptions()
+                val sizePrescriptions = getPrescriptionsSize()
                 Log.d("SIZE ARRAY", sizePrescriptions.toString())
                 var prescription = Prescriptions(
                     id = sizePrescriptions,
@@ -113,7 +113,7 @@ class NewPrescription : AppCompatActivity() {
             }
         }
     }
-    suspend fun getPrescriptions(): Int? {
+    suspend fun getPrescriptionsSize(): Int? {
 
         //GETTING NEWS DATA FROM ENDPOINT
         val retrofit = Retrofit.Builder()

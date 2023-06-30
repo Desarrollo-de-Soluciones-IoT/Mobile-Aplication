@@ -48,25 +48,13 @@ class NewReview : AppCompatActivity() {
         btnPublish.setOnClickListener{
             GlobalScope.launch(Dispatchers.Main) {
 
-                /*var currentPatient = Patients(
-                    id = (sharedPref.getString("id", "Paciente Usuario")).toString().toInt(),
-                    age = Int,
-                    dni = String,
-                    email = String,
-                    name = String,
-                    password = String,
-                    bmi = Float,
-                    height = Int,
-                    weight = Int,
-                    birthDate = String,
-                    phoneNumber = String,
-                    userType = String
-                )*/
+                val sizeReviews = getReviewsSize()
+
                 editTextContent = editText.text.toString()
                 val doctorId = intent.getStringExtra("doctorId")
                 val patientId = sharedPref.getString("id", "Paciente ID")
                 var review = CreateReview(
-                    id = 5,
+                    id = sizeReviews,
                     description = editTextContent,
                     rating = barStar.rating.toInt(),
                     doctorId = doctorId.toString().toInt(),
@@ -100,6 +88,29 @@ class NewReview : AppCompatActivity() {
         button3.setOnClickListener(toolbarClickListener)
         button4.setOnClickListener(toolbarClickListener)
 
+    }
+
+    suspend fun getReviewsSize(): Int? {
+
+        //GETTING NEWS DATA FROM ENDPOINT
+        val retrofit = Retrofit.Builder()
+            //CONNECT TO DEPLOYED API
+            .baseUrl(BaseUrl.base_url)
+            //CONNECT TO LOCALHOST
+            //.baseUrl("http://192.168.1.180:8080/api/v1/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val reviewsService = retrofit.create(ReviewsService::class.java)
+
+        return withContext(Dispatchers.IO) {
+            val response = reviewsService.getReviews().execute()
+            if (response.isSuccessful) {
+                (response.body()?.size ?: 0) + 1
+            } else {
+                null
+            }
+        }
     }
 
     suspend fun getDoctorById(id: Int): Doctors {

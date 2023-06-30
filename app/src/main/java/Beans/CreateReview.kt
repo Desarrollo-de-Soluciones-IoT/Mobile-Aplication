@@ -1,14 +1,14 @@
 package Beans
 
 class CreateReview {
-    var id: Int
+    var id: Int?
     var description: String
     var rating: Int
     var doctorId: Int
     var patientId: Int
 
     constructor(
-        id: Int,
+        id: Int?,
         description: String,
         rating: Int,
         doctorId: Int,

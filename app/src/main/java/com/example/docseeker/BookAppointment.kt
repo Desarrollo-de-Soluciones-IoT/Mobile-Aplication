@@ -4,6 +4,7 @@ import Beans.Appointment
 import Beans.Doctors
 import Interface.AppointmentsService
 import Interface.DoctorsService
+import Interface.PrescriptionsService
 import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
@@ -27,6 +28,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.time.format.DateTimeFormatter
 import java.util.*
 import com.example.docseeker.BaseUrl
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class BookAppointment : AppCompatActivity() {
     private var hora1: String = ""
@@ -73,17 +76,22 @@ class BookAppointment : AppCompatActivity() {
             val dayOfMonth: Int = datePicker.dayOfMonth
             val formattedDate: String = String.format("%d-%02d-%02d", year, month, dayOfMonth)
 
-            var appointment = Appointment(
-                id = 5,
-                date = formattedDate,
-                startTime = hora1,
-                endTime = hora2,
-                doctorId = doctorId.toString().toInt(),
-                patientId = sharedPref.getString("id", "Paciente Usuario").toString().toInt()
-            )
-            createAppointments(appointment)
-            val intent = Intent(this, DashboardPatients::class.java)
-            startActivity(intent)
+            GlobalScope.launch(Dispatchers.Main) {
+
+                val sizeAppointments = getAppointmentsSize()
+
+                var appointment = Appointment(
+                    id = sizeAppointments,
+                    date = formattedDate,
+                    startTime = hora1,
+                    endTime = hora2,
+                    doctorId = doctorId.toString().toInt(),
+                    patientId = sharedPref.getString("id", "Paciente Usuario").toString().toInt()
+                )
+                createAppointments(appointment)
+                val intent = Intent(this@BookAppointment, DashboardPatients::class.java)
+                startActivity(intent)
+            }
         }
 
 
@@ -103,6 +111,29 @@ class BookAppointment : AppCompatActivity() {
         button3.setOnClickListener(toolbarClickListener)
         button4.setOnClickListener(toolbarClickListener)
 
+    }
+
+    suspend fun getAppointmentsSize(): Int? {
+
+        //GETTING NEWS DATA FROM ENDPOINT
+        val retrofit = Retrofit.Builder()
+            //CONNECT TO DEPLOYED API
+            .baseUrl(BaseUrl.base_url)
+            //CONNECT TO LOCALHOST
+            //.baseUrl("http://192.168.1.180:8080/api/v1/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val appointmentsService = retrofit.create(AppointmentsService::class.java)
+
+        return withContext(Dispatchers.IO) {
+            val response = appointmentsService.getAppointments().execute()
+            if (response.isSuccessful) {
+                (response.body()?.size ?: 0) + 1
+            } else {
+                null
+            }
+        }
     }
 
     fun createAppointments(appointment: Appointment) {
