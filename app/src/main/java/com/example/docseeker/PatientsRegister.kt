@@ -26,14 +26,14 @@ class PatientsRegister : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_patients_register)
 
-        var txtName = findViewById<EditText>(R.id.nameInputRegisterDoctor)
-        var txtAge = findViewById<EditText>(R.id.ageInputRegisterDoctor)
-        var txtDni = findViewById<EditText>(R.id.dniInputRegisterDoctor)
-        var txtNumber = findViewById<EditText>(R.id.numberInputRegisterDoctor)
-        var txtBirthday = findViewById<EditText>(R.id.birthdayInputRegisterDoctor)
-        var txtEmail = findViewById<EditText>(R.id.emailInputRegisterDoctor)
-        var txtPassword = findViewById<EditText>(R.id.passwordInputRegisterDoctor)
-        var btnRegister = findViewById<Button>(R.id.RegisterButton)
+        var txtName = findViewById<EditText>(R.id.nameInputRegisterPatient)
+        var txtAge = findViewById<EditText>(R.id.ageInputRegisterPatient)
+        var txtDni = findViewById<EditText>(R.id.dniInputRegisterPatient)
+        var txtNumber = findViewById<EditText>(R.id.numberInputRegisterPatient)
+        var txtBirthday = findViewById<EditText>(R.id.birthdayInputRegisterPatient)
+        var txtEmail = findViewById<EditText>(R.id.emailInputRegisterPatient)
+        var txtPassword = findViewById<EditText>(R.id.passwordInputRegisterPatient)
+        var btnRegister = findViewById<Button>(R.id.RegisterButtonPatient)
 
         btnRegister.setOnClickListener(){
             var patient = Patients(
@@ -48,7 +48,7 @@ class PatientsRegister : AppCompatActivity() {
                 password = txtPassword.text.toString(),
                 birthDate = txtBirthday.text.toString(),
                 phoneNumber = txtNumber.text.toString(),
-                userType = "PATIENT",
+                userType = 0,
                 reviews = emptyList(),
                 allergies = emptyList()
             )

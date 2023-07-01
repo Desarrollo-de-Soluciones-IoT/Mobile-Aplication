@@ -14,7 +14,7 @@ class Patients {
     var weight: Int?
     var birthDate: String
     var phoneNumber: String
-    var userType:String
+    var userType:Int
     var reviews:List<Reviews>
     var allergies:List<String>
 
@@ -30,7 +30,7 @@ class Patients {
         weight: Int?,
         birthDate: String,
         phoneNumber: String,
-        userType: String,
+        userType: Int,
         reviews:List<Reviews>,
         allergies:List<String>
     ) {
