@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">DocSeeker</string>
+    <string name="app_home">Inicio</string>
+    <string name="app_news">Noticias</string>
+    <string name="app_profile">Perfil</string>
+    <string name="app_settings">Ajustes</string>
+    <string name="welcome_message">Bienvenido a DocSeeker</string>
+    <string name="healthcare_professional">Profesional de la salud</string>
+    <string name="patient">Paciente</string>
+    <string name="title_activity_reviews_patients">ReviewsPatients</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_doctor_profile">DoctorProfile</string>
+    <string name="title_activity_new_prescription">NewPrescription</string>
 </resources>

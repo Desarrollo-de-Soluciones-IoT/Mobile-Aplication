@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <include
+            layout="@layout/top_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000"
+            android:layout_marginHorizontal="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+
+            <ImageView
+
+                android:layout_width="99dp"
+                android:layout_height="96dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="6dp"
+                android:clipToOutline="true"
+                android:foregroundGravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_type_patient"
+               />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:id="@+id/newReviewPatientName"
+                android:text="Camilo Alberto Cortés Montejo"
+                android:textSize="14sp"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="279dp">
+
+            <EditText
+                android:layout_width="317dp"
+                android:layout_height="236dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/border_comment"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:id="@+id/newReviewDescription"
+                />
+
+        </LinearLayout>
+
+        <RatingBar
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1"
+            android:progressTint="@color/yellow"
+            android:id="@+id/newReviewStars"/>
+
+        <Button
+            android:id="@+id/btnPublish"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:background="@drawable/button_primary"
+            android:padding="8dp"
+            android:text="Publicar"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+

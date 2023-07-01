@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/infoProfile"/>
+
+    <View
+        android:layout_width="380dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:background="#0093AB"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="401dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="0dp"
+            android:background="#0093AB"
+            android:text="  Información General"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="381dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="105dp"
+                android:layout_height="124dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="67dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/history_height" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/profileHeight"
+                    android:gravity="center"
+
+                    android:text="Altura : 1.72m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="105dp"
+                android:layout_height="124dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="67dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/patient_weight" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:id="@+id/profileWeight"
+                    android:text="Peso: 55 Kg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="105dp"
+                android:layout_height="124dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/history_body_mass" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/profileBmi"
+                    android:text="Peso: 55 Kg" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="#FD5D5D"
+                    android:src="@drawable/alert_history" />
+
+                <TextView
+                    android:layout_width="401dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/poppins"
+                    android:background="#FD5D5D"
+                    android:text="ALERGIAS"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F3C5C5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="MEDICAMENTOS:"
+                            android:textColor="#FD5D5D"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="- Penicilina y derivados"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Factores Naturales:"
+                        android:textColor="#FD5D5D"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="- Polvo"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="401dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/poppins"
+            android:background="#0093AB"
+            android:text="  Información General"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="381dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_marginLeft="30dp"
+                android:layout_height="100dp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="40dp"
+                android:text="- Hipertensión arterial
+                             - Diabetes tipo 2
+                             - Presión artereal alta
+                             - Hipertiroidismo controlado
+                             - Tuberculosis" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

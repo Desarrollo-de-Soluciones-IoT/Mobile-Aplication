@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="673dp"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/top_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="134dp" />
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="529dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="247dp"
+                android:layout_height="233dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/border_alert"
+                android:clipToOutline="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/alert" />
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="101dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="No hay ninguna reseña aún"
+                android:textAlignment="center"
+                android:textSize="35dp" />
+
+            <Button
+                android:id="@+id/comentar_button"
+                android:layout_width="230dp"
+                android:layout_height="71dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/primary"
+                android:text="Comentar"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+
+
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+
+
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+</LinearLayout>
+

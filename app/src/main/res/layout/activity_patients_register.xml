@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".PatientsRegister">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginVertical="20dp"/>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+
+        <EditText
+            android:id="@+id/nameInputRegisterDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_shape"
+            android:padding="16dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:hint="Nombre"
+            android:layout_margin="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/ageInputRegisterDoctor"
+                android:layout_width="100dp"
+                android:fontFamily="@font/poppins"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_shape"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:hint="Edad"
+                android:layout_margin="15dp"/>
+            <EditText
+                android:id="@+id/numberInputRegisterDoctor"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_shape"
+                android:fontFamily="@font/poppins"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:hint="Teléfono"
+                android:layout_margin="15dp"/>
+            <EditText
+                android:id="@+id/birthdayInputRegisterDoctor"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_shape"
+                android:padding="16dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:hint="Nacimiento"
+                android:layout_margin="15dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/dniInputRegisterDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_shape"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:hint="DNI"
+            android:layout_margin="15dp"/>
+        <EditText
+            android:id="@+id/emailInputRegisterDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_shape"
+            android:padding="16dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:hint="Correo electrónico"
+            android:layout_margin="15dp"/>
+
+        <EditText
+            android:id="@+id/passwordInputRegisterDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_shape"
+            android:padding="16dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/RegisterButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins"
+        android:text="Registrarse"
+        android:background="@drawable/button_primary"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+</LinearLayout>
