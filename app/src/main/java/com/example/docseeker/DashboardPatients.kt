@@ -62,9 +62,9 @@ class DashboardPatients : AppCompatActivity() {
             val intent = Intent(this, MedicalHistoryPatient::class.java)
             startActivity(intent)
         }
-        val prescriptionsbutton = findViewById<CardView>(R.id.menu_prescriptions)
-        prescriptionsbutton.setOnClickListener{
-            val intent = Intent(this, ListPrescriptions::class.java)
+        val servicesbutton = findViewById<CardView>(R.id.menu_services)
+        servicesbutton.setOnClickListener{
+            val intent = Intent(this, ListServices::class.java)
             startActivity(intent)
         }
         val appointmentsbutton = findViewById<CardView>(R.id.menu_appointments)

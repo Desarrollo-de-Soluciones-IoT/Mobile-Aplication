@@ -72,6 +72,7 @@ class Doctors_LogIn : AppCompatActivity() {
                         editor.putString("patients_assisted", userLogged.patientsAssisted.toString())
                         editor.putString("experience_years", userLogged.experienceYears.toString())
                         editor.putString("speciality", userLogged.speciality)
+                        editor.putString("userType", userLogged.userType)
 
                         editor.apply()
 

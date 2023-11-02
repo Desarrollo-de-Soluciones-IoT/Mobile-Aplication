@@ -123,7 +123,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/menu_finance"
+                android:id="@+id/menu_services"
                 android:layout_width="120dp"
                 android:layout_height="140dp"
                 app:cardElevation="10dp"
@@ -139,13 +139,13 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="90dp"
-                        android:src="@drawable/coins"
+                        android:src="@drawable/services"
                         android:layout_gravity="center"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins"
-                        android:text="Ingresos"
+                        android:text="Servicios"
                         android:textAlignment="center"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
