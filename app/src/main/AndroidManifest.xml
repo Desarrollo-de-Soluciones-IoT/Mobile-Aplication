@@ -15,6 +15,23 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+
+            android:name=".ListPatientsServices"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Pulse"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Temperature"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ListServices"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
             android:name=".DoctorRegister"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

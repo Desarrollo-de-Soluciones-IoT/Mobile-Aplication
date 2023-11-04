@@ -71,6 +71,7 @@ class Patients_LogIn : AppCompatActivity() {
                         editor.putString("bmi", userLogged.bmi.toString())
                         editor.putString("birth_date", userLogged.birthDate)
                         editor.putString("phone_number", userLogged.phoneNumber)
+                        editor.putString("userType", userLogged.userType)
                         editor.apply()
 
                         val intent= Intent(this@Patients_LogIn, DashboardPatients::class.java)
