@@ -25,7 +25,7 @@
         android:layout_marginVertical="20dp">
 
         <EditText
-            android:id="@+id/nameInputRegisterDoctor"
+            android:id="@+id/nameInputRegisterPatient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/input_shape"
@@ -41,21 +41,23 @@
             android:orientation="horizontal"
             android:gravity="center">
             <EditText
-                android:id="@+id/ageInputRegisterDoctor"
+                android:id="@+id/ageInputRegisterPatient"
                 android:layout_width="100dp"
                 android:fontFamily="@font/poppins"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_shape"
+                android:inputType="number"
                 android:padding="16dp"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:hint="Edad"
                 android:layout_margin="15dp"/>
             <EditText
-                android:id="@+id/numberInputRegisterDoctor"
+                android:id="@+id/numberInputRegisterPatient"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_shape"
+                android:inputType="number"
                 android:fontFamily="@font/poppins"
                 android:padding="16dp"
                 android:textColor="@color/black"
@@ -63,7 +65,7 @@
                 android:hint="Teléfono"
                 android:layout_margin="15dp"/>
             <EditText
-                android:id="@+id/birthdayInputRegisterDoctor"
+                android:id="@+id/birthdayInputRegisterPatient"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_shape"
@@ -76,8 +78,9 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/dniInputRegisterDoctor"
+            android:id="@+id/dniInputRegisterPatient"
             android:layout_width="match_parent"
+            android:inputType="number"
             android:layout_height="wrap_content"
             android:background="@drawable/input_shape"
             android:padding="16dp"
@@ -87,7 +90,7 @@
             android:hint="DNI"
             android:layout_margin="15dp"/>
         <EditText
-            android:id="@+id/emailInputRegisterDoctor"
+            android:id="@+id/emailInputRegisterPatient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/input_shape"
@@ -99,7 +102,7 @@
             android:layout_margin="15dp"/>
 
         <EditText
-            android:id="@+id/passwordInputRegisterDoctor"
+            android:id="@+id/passwordInputRegisterPatient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/input_shape"
@@ -115,7 +118,7 @@
 
 
     <Button
-        android:id="@+id/RegisterButton"
+        android:id="@+id/RegisterButtonPatient"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

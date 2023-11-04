@@ -1,13 +1,13 @@
 package Beans
 
 class Doctors {
-    var id: Int
+    var id: Int?
     var age: Int
     var dni: String
     var email: String
     var name: String
     var password: String
-    var userType: String
+    var userType: Int
     var description: String
     var doctorFee: Float
     var experienceYears: Int
@@ -16,13 +16,13 @@ class Doctors {
     var speciality: String
 
     constructor(
-        id: Int,
+        id: Int?,
         age: Int,
         dni: String,
         email: String,
         name: String,
         password: String,
-        userType: String,
+        userType: Int,
         description: String,
         doctorFee: Float,
         experienceYears: Int,
