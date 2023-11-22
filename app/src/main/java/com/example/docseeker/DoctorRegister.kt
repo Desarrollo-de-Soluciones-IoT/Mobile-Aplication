@@ -1,4 +1,4 @@
-package com.example.docseeker
+/*package com.example.docseeker
 
 import Beans.Doctors
 import Beans.Patients
@@ -125,4 +125,4 @@ class DoctorRegister : AppCompatActivity() {
             }
         })
     }
-}
+}*/

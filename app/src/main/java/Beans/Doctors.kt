@@ -7,7 +7,7 @@ class Doctors {
     var email: String
     var name: String
     var password: String
-    var userType: Int
+    var userType: String
     var description: String
     var doctorFee: Float
     var experienceYears: Int
@@ -22,7 +22,7 @@ class Doctors {
         email: String,
         name: String,
         password: String,
-        userType: Int,
+        userType: String,
         description: String,
         doctorFee: Float,
         experienceYears: Int,

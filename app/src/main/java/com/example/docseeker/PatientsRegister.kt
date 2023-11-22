@@ -48,7 +48,7 @@ class PatientsRegister : AppCompatActivity() {
                 password = txtPassword.text.toString(),
                 birthDate = txtBirthday.text.toString(),
                 phoneNumber = txtNumber.text.toString(),
-                userType = 0,
+                userType = "PATIENT",
                 reviews = emptyList(),
                 allergies = emptyList()
             )
